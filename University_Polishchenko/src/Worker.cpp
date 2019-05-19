@@ -46,5 +46,5 @@ float Worker::income() {
 
 std::string Worker::getInfo() {
     return Human::getInfo() + _job.getProfName() + ", "
-    + std::to_string(_job.getBaseRate()) + ", ";
+    + std::to_string(income()) + ", ";
 }
