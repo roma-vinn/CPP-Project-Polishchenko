@@ -30,6 +30,7 @@ public:
     void setAge(int age);
     virtual float income() = 0;
     
+    virtual std::string getInfo();
 private:
     std::string _name = "";
     int _age = 0;

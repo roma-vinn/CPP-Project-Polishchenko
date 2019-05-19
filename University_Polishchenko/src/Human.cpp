@@ -37,3 +37,7 @@ void Human::setAge(int age) {
         _age = age;
     }
 }
+
+std::string Human::getInfo() {
+    return _name + ", " + std::to_string(_age) + ", ";
+}
