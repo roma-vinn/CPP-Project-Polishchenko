@@ -49,5 +49,5 @@ void Human::setAge(int age) {
 }
 
 std::string Human::getInfo() {
-    return _name + ", " + std::to_string(_age) + ", ";
+    return _name + ", " + std::to_string(_age) + " years, ";
 }

@@ -24,8 +24,9 @@ public:
     
     std::string getJobName() { return _job.getProfName(); };
     void setJob(std::string job_name, float base_rate);
+    Profession getJob() { return _job; };
     void setExperience(int years) { _experience = years; };
-    
+    int getExperience() { return _experience; };
     virtual float income();
     
     virtual std::string getInfo();
