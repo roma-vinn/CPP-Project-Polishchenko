@@ -7,9 +7,14 @@
 //
 
 #include <iostream>
+#include "src/Worker.hpp"
+
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Worker worker("Andrew");
+    worker.setJob("Mathematician", 6000);
+    cout << worker.getInfo() << '\n';
+    
     return 0;
 }
