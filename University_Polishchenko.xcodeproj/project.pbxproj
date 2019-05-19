@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3062A9D12290970A000B5807 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9D02290970A000B5807 /* main.cpp */; };
+		3062A9DC229097DA000B5807 /* University.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9DA229097DA000B5807 /* University.cpp */; };
+		3062A9DF229098A5000B5807 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9DD229098A5000B5807 /* Human.cpp */; };
+		3062A9E322909EC0000B5807 /* RecordBook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9E122909EC0000B5807 /* RecordBook.cpp */; };
+		3062A9E622909ECE000B5807 /* Profession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9E422909ECE000B5807 /* Profession.cpp */; };
+		3062A9E922909ED8000B5807 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9E722909ED8000B5807 /* Student.cpp */; };
+		3062A9EC22909EF5000B5807 /* Worker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9EA22909EF5000B5807 /* Worker.cpp */; };
+		3062A9EF22909F0E000B5807 /* Teacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9ED22909F0E000B5807 /* Teacher.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,20 @@
 /* Begin PBXFileReference section */
 		3062A9CD2290970A000B5807 /* University_Polishchenko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = University_Polishchenko; sourceTree = BUILT_PRODUCTS_DIR; };
 		3062A9D02290970A000B5807 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		3062A9DA229097DA000B5807 /* University.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = University.cpp; sourceTree = "<group>"; };
+		3062A9DB229097DA000B5807 /* University.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = University.hpp; sourceTree = "<group>"; };
+		3062A9DD229098A5000B5807 /* Human.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
+		3062A9DE229098A5000B5807 /* Human.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Human.hpp; sourceTree = "<group>"; };
+		3062A9E122909EC0000B5807 /* RecordBook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RecordBook.cpp; sourceTree = "<group>"; };
+		3062A9E222909EC0000B5807 /* RecordBook.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RecordBook.hpp; sourceTree = "<group>"; };
+		3062A9E422909ECE000B5807 /* Profession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Profession.cpp; sourceTree = "<group>"; };
+		3062A9E522909ECE000B5807 /* Profession.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Profession.hpp; sourceTree = "<group>"; };
+		3062A9E722909ED8000B5807 /* Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student.cpp; sourceTree = "<group>"; };
+		3062A9E822909ED8000B5807 /* Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Student.hpp; sourceTree = "<group>"; };
+		3062A9EA22909EF5000B5807 /* Worker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Worker.cpp; sourceTree = "<group>"; };
+		3062A9EB22909EF5000B5807 /* Worker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Worker.hpp; sourceTree = "<group>"; };
+		3062A9ED22909F0E000B5807 /* Teacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Teacher.cpp; sourceTree = "<group>"; };
+		3062A9EE22909F0E000B5807 /* Teacher.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Teacher.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +78,39 @@
 		3062A9CF2290970A000B5807 /* University_Polishchenko */ = {
 			isa = PBXGroup;
 			children = (
+				3062A9D92290977D000B5807 /* tests */,
+				3062A9D722909764000B5807 /* src */,
 				3062A9D02290970A000B5807 /* main.cpp */,
 			);
 			path = University_Polishchenko;
+			sourceTree = "<group>";
+		};
+		3062A9D722909764000B5807 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3062A9DA229097DA000B5807 /* University.cpp */,
+				3062A9DB229097DA000B5807 /* University.hpp */,
+				3062A9DD229098A5000B5807 /* Human.cpp */,
+				3062A9DE229098A5000B5807 /* Human.hpp */,
+				3062A9E122909EC0000B5807 /* RecordBook.cpp */,
+				3062A9E222909EC0000B5807 /* RecordBook.hpp */,
+				3062A9E422909ECE000B5807 /* Profession.cpp */,
+				3062A9E522909ECE000B5807 /* Profession.hpp */,
+				3062A9E722909ED8000B5807 /* Student.cpp */,
+				3062A9E822909ED8000B5807 /* Student.hpp */,
+				3062A9EA22909EF5000B5807 /* Worker.cpp */,
+				3062A9EB22909EF5000B5807 /* Worker.hpp */,
+				3062A9ED22909F0E000B5807 /* Teacher.cpp */,
+				3062A9EE22909F0E000B5807 /* Teacher.hpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		3062A9D92290977D000B5807 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,7 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3062A9EF22909F0E000B5807 /* Teacher.cpp in Sources */,
+				3062A9E622909ECE000B5807 /* Profession.cpp in Sources */,
 				3062A9D12290970A000B5807 /* main.cpp in Sources */,
+				3062A9E322909EC0000B5807 /* RecordBook.cpp in Sources */,
+				3062A9E922909ED8000B5807 /* Student.cpp in Sources */,
+				3062A9DC229097DA000B5807 /* University.cpp in Sources */,
+				3062A9EC22909EF5000B5807 /* Worker.cpp in Sources */,
+				3062A9DF229098A5000B5807 /* Human.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
