@@ -17,7 +17,7 @@ _base_rate(base_rate)
 void Profession::setProfName(std::string prof_name) {
     // in case of calling with empty string
     if (prof_name.length() == 0) {
-        std::cout << "Invalid profession name.\n";
+        std::cout << "Profession name can`t be empty string.\n";
     } else {
         _prof_name = prof_name;
     }

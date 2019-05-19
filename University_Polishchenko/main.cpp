@@ -12,6 +12,7 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-
+    Worker w("", "", 100000);
+    cout << w.getInfo() << endl;
     return 0;
 }
