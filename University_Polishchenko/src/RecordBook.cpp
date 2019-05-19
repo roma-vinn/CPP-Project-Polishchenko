@@ -54,3 +54,14 @@ void RecordBook::addSubject(std::string sub_name, int grade_point) {
         _grade_point_avg = avg / _book.size();
     }
 }
+
+std::string RecordBook::getRepr() {
+    std::string repr = "";
+    for (std::map<std::string, int>::const_iterator it = _book.begin(),
+         end = _book.end();
+         it != end; ++it) {
+        repr += it->first + " - " + std::to_string(it->second) + '\n';
+    }
+    repr += "Grade point avarage - " + std::to_string(_grade_point_avg) + '\n';
+    return repr;
+}

@@ -25,6 +25,7 @@ public:
     ~RecordBook() {};
     void addSubject(std::string sub_name, int grade_point);
     float getAvgGradePoint() { return _grade_point_avg; };
+    std::string getRepr();
 private:
     std::map<std::string, int> _book {};
     float _grade_point_avg = 0.0;
