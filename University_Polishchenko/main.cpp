@@ -12,9 +12,6 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    Worker worker("Andrew");
-    worker.setJob("Mathematician", 6000);
-    cout << worker.getInfo() << '\n';
-    
+
     return 0;
 }

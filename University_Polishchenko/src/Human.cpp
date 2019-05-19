@@ -9,14 +9,24 @@
 #include "Human.hpp"
 
 Human::Human(std::string name, int age)
-:_name(name),
-_age(age)
 {
+    if (name.length() == 0) {
+        std::cout << "Name can`t empty string.\n";
+    } else if (age < 0) {
+        std::cout << "Incorrect age: " << age << ". Should be not less 0.\n";
+    } else {
+        _name = name;
+        _age = age;
+    }
 }
 
 Human::Human(std::string name)
-:_name(name)
 {
+    if (name.length() == 0) {
+        std::cout << "Name can`t empty string.\n";
+    } else {
+        _name = name;
+    }
 }
 
 void Human::setName(std::string name) {
