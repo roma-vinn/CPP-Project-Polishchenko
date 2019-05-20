@@ -20,6 +20,7 @@ public:
     Worker(std::string name, int age);
 //    Worker(std::string name, std::string job_name, float base_rate);
     Worker(std::string name, int age, std::string job_name, float base_rate);
+    Worker(std::string name, int age, Profession prof);
     ~Worker() {};
     
     std::string getJobName() { return _job.getProfName(); };

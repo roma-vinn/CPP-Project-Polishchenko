@@ -30,6 +30,11 @@ Worker::Worker(std::string name, int age,
     _job.setBaseRate(base_rate);
 }
 
+Worker::Worker(std::string name, int age,
+               Profession prof): Human(name, age) {
+    _job = prof;
+}
+
 void Worker::setJob(std::string job_name, float base_rate) {
     _job.setProfName(job_name);
     _job.setBaseRate(base_rate);
