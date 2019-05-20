@@ -88,7 +88,7 @@ void Teacher::removeStudent(std::string st_name) {
 }
 
 void Teacher::showStudents() {
-    std::cout << "Students:\n";
+    std::cout << "Students of " << getName() << ":\n";
     for (std::vector<Student*>::const_iterator it = _students.begin(),
          end = _students.end();
          it != end; ++it) {
@@ -97,12 +97,12 @@ void Teacher::showStudents() {
 }
 
 float Teacher::getAvgGradePoint() {
-    float avg_gp = 0.0, sum = 0.0, count = 0.0;
+    float avg_gp = 0.0, sum = 0.0;
+    size_t count;
     if (_students.size() > 0) {
-        for (size_t i = 0; i<_students.size(); ++i) {
-            sum += _students[i]->getAvgGradePoint();
+        for (count = 0; count<_students.size(); ++count) {
+            sum += _students[count]->getAvgGradePoint();
         }
-        
         avg_gp = sum / count;
     }
     

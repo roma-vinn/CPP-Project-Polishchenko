@@ -45,5 +45,15 @@ int main(int argc, const char * argv[]) {
     cout << s3.getInfo() << endl;
     cout << s4.getInfo() << endl;
     
+    // Students list test
+    
+    t2.addStudent(s1);
+    t2.addStudent(s2);
+    t2.addStudent(s3);
+    t2.addStudent(s4);
+    
+    t2.showStudents();
+    cout << "Avarage grade point - " << t2.getAvgGradePoint() << endl;
+    
     return 0;
 }
