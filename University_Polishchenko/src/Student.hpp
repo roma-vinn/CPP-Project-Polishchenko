@@ -15,13 +15,13 @@
 
 class Student : public Worker {
 public:
-    Student(std::string name);
+//    Student(std::string name);
     Student(std::string name, int age);
-    Student(std::string name, std::string job_name, float base_rate);
+//    Student(std::string name, std::string job_name, float base_rate);
     Student(std::string name, int age, std::string job_name, float base_rate);
     Student(std::string name, int age, std::string job_name,
             float base_rate, RecordBook record_book);
-    Student(std::string name, RecordBook record_book);
+//    Student(std::string name, RecordBook record_book);
     Student(std::string name, int age, RecordBook record_book);
     
     void setRecordBook(RecordBook record_book);

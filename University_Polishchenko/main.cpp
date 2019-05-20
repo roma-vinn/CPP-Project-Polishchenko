@@ -15,7 +15,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     // Worker test
-    Worker w("Antony", "Burglar", 100000);
+    Worker w("Antony", 24, "Burglar", 100000);
     cout << w.getInfo() << endl;
     
     // Teacher test

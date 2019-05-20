@@ -20,14 +20,14 @@ Human::Human(std::string name, int age)
     }
 }
 
-Human::Human(std::string name)
-{
-    if (name.length() == 0) {
-        std::cout << "Name can`t empty string.\n";
-    } else {
-        _name = name;
-    }
-}
+//Human::Human(std::string name)
+//{
+//    if (name.length() == 0) {
+//        std::cout << "Name can`t empty string.\n";
+//    } else {
+//        _name = name;
+//    }
+//}
 
 void Human::setName(std::string name) {
     // in case of calling with empty string

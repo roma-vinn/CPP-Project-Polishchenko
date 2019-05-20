@@ -8,18 +8,18 @@
 
 #include "Student.hpp"
 
-Student::Student(std::string name) : Worker(name)
-{
-}
+//Student::Student(std::string name) : Worker(name)
+//{
+//}
 
 Student::Student(std::string name, int age) : Worker(name, age)
 {
 }
 
-Student::Student(std::string name, std::string job_name,
-                 float base_rate) : Worker(name, job_name, base_rate)
-{
-}
+//Student::Student(std::string name, std::string job_name,
+//                 float base_rate) : Worker(name, job_name, base_rate)
+//{
+//}
 
 Student::Student(std::string name, int age, std::string job_name,
                  float base_rate) : Worker(name, age, job_name, base_rate)
@@ -32,10 +32,10 @@ Student::Student(std::string name, int age, std::string job_name, float base_rat
     _record_book = record_book;
 }
 
-Student::Student(std::string name, RecordBook record_book) : Worker(name)
-{
-    _record_book = record_book;
-}
+//Student::Student(std::string name, RecordBook record_book) : Worker(name)
+//{
+//    _record_book = record_book;
+//}
 
 Student::Student(std::string name, int age,
                  RecordBook record_book) : Worker(name, age)

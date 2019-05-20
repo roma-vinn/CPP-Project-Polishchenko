@@ -8,20 +8,20 @@
 
 #include "Worker.hpp"
 
-Worker::Worker(std::string name) : Human(name)
-{
-}
+//Worker::Worker(std::string name) : Human(name)
+//{
+//}
 
 Worker::Worker(std::string name, int age) : Human(name, age)
 {
 }
 
-Worker::Worker(std::string name, std::string job_name,
-               float base_rate) : Human(name)
-{
-    _job.setProfName(job_name);
-    _job.setBaseRate(base_rate);
-}
+//Worker::Worker(std::string name, std::string job_name,
+//               float base_rate) : Human(name)
+//{
+//    _job.setProfName(job_name);
+//    _job.setBaseRate(base_rate);
+//}
 
 Worker::Worker(std::string name, int age,
                std::string job_name, float base_rate) : Human(name, age)

@@ -21,7 +21,7 @@
  */
 class Human {
 public:
-    Human(std::string name);
+//    Human(std::string name);
     Human(std::string name, int age);
     ~Human() {};
     std::string getName() { return _name; };

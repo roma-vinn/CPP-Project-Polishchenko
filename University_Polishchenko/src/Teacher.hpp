@@ -18,9 +18,9 @@
 
 class Teacher : public Worker {
 public:
-    Teacher(std::string name);
+//    Teacher(std::string name);
     Teacher(std::string name, int age);
-    Teacher(std::string name, std::string degree);
+//    Teacher(std::string name, std::string degree);
     Teacher(std::string name, int age, std::string degree);
 
     ~Teacher() {};
