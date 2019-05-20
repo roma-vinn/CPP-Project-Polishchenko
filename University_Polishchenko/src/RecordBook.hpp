@@ -20,10 +20,11 @@
  */
 class RecordBook {
 public:
+    RecordBook() {};
     RecordBook(std::vector<std::string> subjects);
     RecordBook(std::map<std::string, int> record_book);
     ~RecordBook() {};
-    void addSubject(std::string sub_name, int grade_point);
+    void updateSubject(std::string sub_name, int grade_point);
     float getAvgGradePoint() { return _grade_point_avg; };
     std::string getRepr();
 private:

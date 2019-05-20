@@ -35,7 +35,7 @@ RecordBook::RecordBook(std::map<std::string, int> record_book) {
     _grade_point_avg = avg / record_book.size();
 }
 
-void RecordBook::addSubject(std::string sub_name, int grade_point) {
+void RecordBook::updateSubject(std::string sub_name, int grade_point) {
     if (grade_point < 0 || grade_point > 100) {
         std::cout << "Invalid grade point: " << grade_point <<
         ". Should be from 0 to 100.\n";
