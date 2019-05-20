@@ -66,6 +66,49 @@ float Teacher::income() {
     return inc * coef;
 }
 
+//void addStudent(Student student);
+//void removeStudent(std::string st_name);
+//void showStudentList();
+//
+//float getAvgGradePoint();
+
+void Teacher::addStudent(Student& student) {
+    _students.push_back(&student);
+}
+
+void Teacher::removeStudent(std::string st_name) {
+    for (std::vector<Student*>::const_iterator it = _students.begin(),
+         end = _students.end();
+         it != end; ++it) {
+        if ((*it)->getName() == st_name) {
+            _students.erase(it);
+            break;
+        }
+    }
+}
+
+void Teacher::showStudents() {
+    std::cout << "Students:\n";
+    for (std::vector<Student*>::const_iterator it = _students.begin(),
+         end = _students.end();
+         it != end; ++it) {
+        std::cout << (*it)->getInfo() << std::endl;
+    }
+}
+
+float Teacher::getAvgGradePoint() {
+    float avg_gp = 0.0, sum = 0.0, count = 0.0;
+    if (_students.size() > 0) {
+        for (size_t i = 0; i<_students.size(); ++i) {
+            sum += _students[i]->getAvgGradePoint();
+        }
+        
+        avg_gp = sum / count;
+    }
+    
+    return avg_gp;
+}
+
 std::string Teacher::getInfo() {
     return Worker::getInfo() + _degree + " degree, ";
 }

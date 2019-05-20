@@ -14,6 +14,7 @@
 #include <string>
 #include <vector>
 #include "Worker.hpp"
+#include "Student.hpp"
 
 class Teacher : public Worker {
 public:
@@ -27,11 +28,17 @@ public:
     std::string getDegree() { return _degree; };
 
     float income();
-
+    
+    void addStudent(Student& student);
+    void removeStudent(std::string st_name);
+    void showStudents();
+    
+    float getAvgGradePoint();
+    
     std::string getInfo();
 private:
     std::string _degree = "None";
-//    std::vector<Student>
+    std::vector<Student*> _students;
     static const std::map<std::string, float> _degreeFactor;
     static const float _salary;
 };

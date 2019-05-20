@@ -30,6 +30,7 @@ public:
     RecordBook getRecordBook() { return _record_book; };
     float getAvgGradePoint() { return _record_book.getAvgGradePoint(); };
     float income();
+
     std::string getInfo();
     
 private:
