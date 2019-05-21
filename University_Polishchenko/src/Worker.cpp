@@ -30,14 +30,13 @@ Worker::Worker(std::string name, int age,
     _job.setBaseRate(base_rate);
 }
 
-Worker::Worker(std::string name, int age,
-               Profession prof): Human(name, age) {
-    _job = prof;
-}
+//Worker::Worker(std::string name, int age,
+//               Profession prof): Human(name, age) {
+//    _job = prof;
+//}
 
-void Worker::setJob(std::string job_name, float base_rate) {
-    _job.setProfName(job_name);
-    _job.setBaseRate(base_rate);
+void Worker::setJob(Profession profession) {
+    _job = profession;
 }
 
 /*
@@ -46,7 +45,7 @@ void Worker::setJob(std::string job_name, float base_rate) {
  as +5% for every 5 years of work.
  */
 float Worker::income() {
-    return _job.getBaseRate() * (1 + _experience % 5 * 0.05);
+    return _job.getBaseRate() * (1 + static_cast<int>(_experience / 5) * 0.05);
 }
 
 std::string Worker::getInfo() {

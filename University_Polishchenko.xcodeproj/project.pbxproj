@@ -15,6 +15,12 @@
 		3062A9E922909ED8000B5807 /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9E722909ED8000B5807 /* Student.cpp */; };
 		3062A9EC22909EF5000B5807 /* Worker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9EA22909EF5000B5807 /* Worker.cpp */; };
 		3062A9EF22909F0E000B5807 /* Teacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3062A9ED22909F0E000B5807 /* Teacher.cpp */; };
+		30713234229495DC00ECAB50 /* test_Worker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30713232229495DC00ECAB50 /* test_Worker.cpp */; };
+		307132372294A1D900ECAB50 /* test_RecordBook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 307132352294A1D900ECAB50 /* test_RecordBook.cpp */; };
+		3071323A2294A1E900ECAB50 /* test_Profession.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 307132382294A1E900ECAB50 /* test_Profession.cpp */; };
+		3071323D2294A1F300ECAB50 /* test_Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3071323B2294A1F300ECAB50 /* test_Student.cpp */; };
+		307132402294A1FC00ECAB50 /* test_Teacher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3071323E2294A1FC00ECAB50 /* test_Teacher.cpp */; };
+		307132432294A4BD00ECAB50 /* tests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 307132412294A4BD00ECAB50 /* tests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +52,18 @@
 		3062A9EB22909EF5000B5807 /* Worker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Worker.hpp; sourceTree = "<group>"; };
 		3062A9ED22909F0E000B5807 /* Teacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Teacher.cpp; sourceTree = "<group>"; };
 		3062A9EE22909F0E000B5807 /* Teacher.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Teacher.hpp; sourceTree = "<group>"; };
+		30713232229495DC00ECAB50 /* test_Worker.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_Worker.cpp; sourceTree = "<group>"; };
+		30713233229495DC00ECAB50 /* test_Worker.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_Worker.hpp; sourceTree = "<group>"; };
+		307132352294A1D900ECAB50 /* test_RecordBook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_RecordBook.cpp; sourceTree = "<group>"; };
+		307132362294A1D900ECAB50 /* test_RecordBook.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_RecordBook.hpp; sourceTree = "<group>"; };
+		307132382294A1E900ECAB50 /* test_Profession.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_Profession.cpp; sourceTree = "<group>"; };
+		307132392294A1E900ECAB50 /* test_Profession.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_Profession.hpp; sourceTree = "<group>"; };
+		3071323B2294A1F300ECAB50 /* test_Student.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_Student.cpp; sourceTree = "<group>"; };
+		3071323C2294A1F300ECAB50 /* test_Student.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_Student.hpp; sourceTree = "<group>"; };
+		3071323E2294A1FC00ECAB50 /* test_Teacher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_Teacher.cpp; sourceTree = "<group>"; };
+		3071323F2294A1FC00ECAB50 /* test_Teacher.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = test_Teacher.hpp; sourceTree = "<group>"; };
+		307132412294A4BD00ECAB50 /* tests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tests.cpp; sourceTree = "<group>"; };
+		307132422294A4BD00ECAB50 /* tests.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = tests.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,18 @@
 		3062A9D92290977D000B5807 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				30713232229495DC00ECAB50 /* test_Worker.cpp */,
+				30713233229495DC00ECAB50 /* test_Worker.hpp */,
+				307132352294A1D900ECAB50 /* test_RecordBook.cpp */,
+				307132362294A1D900ECAB50 /* test_RecordBook.hpp */,
+				307132382294A1E900ECAB50 /* test_Profession.cpp */,
+				307132392294A1E900ECAB50 /* test_Profession.hpp */,
+				3071323B2294A1F300ECAB50 /* test_Student.cpp */,
+				3071323C2294A1F300ECAB50 /* test_Student.hpp */,
+				3071323E2294A1FC00ECAB50 /* test_Teacher.cpp */,
+				3071323F2294A1FC00ECAB50 /* test_Teacher.hpp */,
+				307132412294A4BD00ECAB50 /* tests.cpp */,
+				307132422294A4BD00ECAB50 /* tests.hpp */,
 			);
 			path = tests;
 			sourceTree = "<group>";
@@ -172,7 +202,13 @@
 				3062A9EF22909F0E000B5807 /* Teacher.cpp in Sources */,
 				3062A9E622909ECE000B5807 /* Profession.cpp in Sources */,
 				3062A9D12290970A000B5807 /* main.cpp in Sources */,
+				307132402294A1FC00ECAB50 /* test_Teacher.cpp in Sources */,
+				3071323D2294A1F300ECAB50 /* test_Student.cpp in Sources */,
+				3071323A2294A1E900ECAB50 /* test_Profession.cpp in Sources */,
+				307132372294A1D900ECAB50 /* test_RecordBook.cpp in Sources */,
+				307132432294A4BD00ECAB50 /* tests.cpp in Sources */,
 				3062A9E322909EC0000B5807 /* RecordBook.cpp in Sources */,
+				30713234229495DC00ECAB50 /* test_Worker.cpp in Sources */,
 				3062A9E922909ED8000B5807 /* Student.cpp in Sources */,
 				3062A9DC229097DA000B5807 /* University.cpp in Sources */,
 				3062A9EC22909EF5000B5807 /* Worker.cpp in Sources */,

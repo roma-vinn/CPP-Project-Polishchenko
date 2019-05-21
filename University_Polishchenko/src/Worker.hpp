@@ -20,11 +20,11 @@ public:
     Worker(std::string name, int age);
 //    Worker(std::string name, std::string job_name, float base_rate);
     Worker(std::string name, int age, std::string job_name, float base_rate);
-    Worker(std::string name, int age, Profession prof);
+//    Worker(std::string name, int age, Profession profession);
     ~Worker() {};
     
     std::string getJobName() { return _job.getProfName(); };
-    void setJob(std::string job_name, float base_rate);
+    void setJob(Profession profession);
     Profession getJob() { return _job; };
     void setExperience(int years) { _experience = years; };
     int getExperience() { return _experience; };

@@ -22,7 +22,7 @@ const float Teacher::_salary = 6000;
 //}
 
 Teacher::Teacher(std::string name, int age) : Worker(name, age) {
-    setJob("Teacher", _salary);
+    setJob(Profession("Teacher", _salary));
 }
 
 //Teacher::Teacher(std::string name, std::string degree) : Worker(name) {
@@ -32,7 +32,7 @@ Teacher::Teacher(std::string name, int age) : Worker(name, age) {
 
 Teacher::Teacher(std::string name, int age,
                  std::string degree) : Worker(name, age) {
-    setJob("Teacher", _salary);
+    setJob(Profession("Teacher", _salary));
     setDegree(degree);
 }
 
