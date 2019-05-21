@@ -8,7 +8,7 @@
 
 #include "test_RecordBook.hpp"
 
-int test_RecordBook() {
+int testRecordBook() {
     try {
         std::vector<std::string> subjects {"Math", "History"};
         std::map<std::string, int> record_book {{"Math", 100}, {"History", 80}};
@@ -30,7 +30,7 @@ int test_RecordBook() {
         }
         
         // test 'getRepr' and correctness of result
-        std::string res = "History - 0\nMath - 100\nGrade point avarage - 50.000000";
+        std::string res = "History - 0\nMath - 100\nGrade point avarage - 50.000000\n";
         if (rb2.getRepr() != res) {
             throw ;
         }

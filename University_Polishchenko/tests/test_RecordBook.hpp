@@ -12,6 +12,6 @@
 #include <iostream>
 #include "../src/RecordBook.hpp"
 
-int test_RecordBook();
+int testRecordBook();
 
 #endif /* test_RecordBook_hpp */

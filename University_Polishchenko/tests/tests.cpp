@@ -9,5 +9,25 @@
 #include "tests.hpp"
 
 int tests() {
-    return 0;
+    bool success = true;
+    
+    if (testWorker()) {
+        std::cout << "WORKER CLASS TEST FAILED!\n";
+        success = false;
+    } else {
+        std::cout << "Worker class test passed.\n";
+    }
+    
+    if (testRecordBook()) {
+        std::cout << "RECORDBOOK CLASS TEST FAILED!\n";
+        success = false;
+    } else {
+        std::cout << "RecordBook class test passed.\n";
+    }
+    
+    if (!success) {
+        return -1;
+    } else {
+        return 0;
+    }
 }
