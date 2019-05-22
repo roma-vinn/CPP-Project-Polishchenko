@@ -30,7 +30,7 @@ int testWorker() {
         }
         
         // test 'getInfo' and correctness of result
-        std::string res = "Worker1, 25 years, TestJob, 0 years seniority, 4600.000000, ";
+        std::string res = "Worker1, 25 years, TestJob, 0 years seniority, 4600.000000 income, ";
         if (w1.getInfo() != res) {
             throw ;
         }

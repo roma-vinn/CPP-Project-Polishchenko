@@ -24,10 +24,11 @@ public:
 //    Student(std::string name, RecordBook record_book);
     Student(std::string name, int age, RecordBook record_book);
     
+    RecordBook getRecordBook() { return _record_book; };
     void setRecordBook(RecordBook record_book);
+    
     void updateSubject(std::string sub_name, int grade_point);
     void showRecordBook();
-    RecordBook getRecordBook() { return _record_book; };
     float getAvgGradePoint() { return _record_book.getAvgGradePoint(); };
     float income();
 

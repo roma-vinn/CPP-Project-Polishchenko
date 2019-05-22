@@ -14,7 +14,7 @@ int main(int argc, const char * argv[]) {
     if (tests()) {
         cout << "Something went wrong.\n";
     } else {
-        cout << "Everything OK.\n";
+        cout << "\nEverything OK.\n";
     }
         
     return 0;

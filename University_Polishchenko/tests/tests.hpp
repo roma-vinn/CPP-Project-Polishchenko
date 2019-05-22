@@ -13,6 +13,7 @@
 #include "test_Worker.hpp"
 #include "test_RecordBook.hpp"
 #include "test_Profession.hpp"
+#include "test_Student.hpp"
 
 int tests();
 

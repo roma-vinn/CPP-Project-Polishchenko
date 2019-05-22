@@ -15,21 +15,28 @@ int tests() {
         std::cout << "WORKER CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Worker class test passed.\n";
+        std::cout << "Worker class test passed...\n";
     }
     
     if (testRecordBook()) {
         std::cout << "RECORDBOOK CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "RecordBook class test passed.\n";
+        std::cout << "RecordBook class test passed...\n";
     }
     
     if (testProfession()) {
         std::cout << "PROFESSION CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Profession class test passed.\n";
+        std::cout << "Profession class test passed...\n";
+    }
+    
+    if (testStudent()) {
+        std::cout << "STUDENT CLASS TEST FAILED!\n";
+        success = false;
+    } else {
+        std::cout << "Student class test passed...\n";
     }
     
     if (!success) {
