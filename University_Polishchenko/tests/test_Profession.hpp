@@ -9,6 +9,9 @@
 #ifndef test_Profession_hpp
 #define test_Profession_hpp
 
-#include <stdio.h>
+#include <iostream>
+#include "../src/Profession.hpp"
+
+int testProfession();
 
 #endif /* test_Profession_hpp */

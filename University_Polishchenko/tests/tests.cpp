@@ -25,6 +25,13 @@ int tests() {
         std::cout << "RecordBook class test passed.\n";
     }
     
+    if (testProfession()) {
+        std::cout << "PROFESSION CLASS TEST FAILED!\n";
+        success = false;
+    } else {
+        std::cout << "Profession class test passed.\n";
+    }
+    
     if (!success) {
         return -1;
     } else {
