@@ -9,6 +9,9 @@
 #ifndef test_Student_hpp
 #define test_Student_hpp
 
-#include <stdio.h>
+#include <iostream>
+#include "../src/Student.hpp"
+
+int testStudent();
 
 #endif /* test_Student_hpp */
