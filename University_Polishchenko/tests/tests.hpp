@@ -14,6 +14,7 @@
 #include "test_RecordBook.hpp"
 #include "test_Profession.hpp"
 #include "test_Student.hpp"
+#include "test_Teacher.hpp"
 
 int tests();
 

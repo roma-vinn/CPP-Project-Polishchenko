@@ -9,6 +9,8 @@
 #ifndef test_Teacher_hpp
 #define test_Teacher_hpp
 
-#include <stdio.h>
+#include "../src/Teacher.hpp"
+
+int testTeacher();
 
 #endif /* test_Teacher_hpp */

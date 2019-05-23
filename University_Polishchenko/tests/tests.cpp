@@ -39,6 +39,13 @@ int tests() {
         std::cout << "Student class test passed...\n";
     }
     
+    if (testTeacher()) {
+        std::cout << "TEACHER CLASS TEST FAILED!\n";
+        success = false;
+    } else {
+        std::cout << "Teacher class test passed...\n";
+    }
+    
     if (!success) {
         return -1;
     } else {
