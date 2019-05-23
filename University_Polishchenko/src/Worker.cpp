@@ -30,6 +30,14 @@ Worker::Worker(std::string name, int age,
     _job.setBaseRate(base_rate);
 }
 
+Worker::Worker(std::string name, int age, std::string job_name,
+               float base_rate, int seniority) : Human(name, age)
+{
+    _job.setProfName(job_name);
+    _job.setBaseRate(base_rate);
+    setExperience(seniority);
+}
+
 //Worker::Worker(std::string name, int age,
 //               Profession prof): Human(name, age) {
 //    _job = prof;

@@ -13,6 +13,7 @@ int testWorker() {
         // test constructors
         Worker w1("Worker1", 25);
         Worker w2("Worker2", 28, "TestJob", 4600);
+        Worker w3("Worker3", 28, "TestJob", 4600, 10);
         
         // test 'setJob' and 'getJob'
         w1.setJob(w2.getJob());
