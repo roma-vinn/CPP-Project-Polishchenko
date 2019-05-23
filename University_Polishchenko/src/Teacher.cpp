@@ -8,6 +8,8 @@
 
 #include "Teacher.hpp"
 
+extern bool LOGGING;
+
 const std::map<std::string, float> Teacher::_degreeFactor {
     {"None", 1.0},
     {"Bachelor", 1.1},
@@ -23,6 +25,9 @@ const float Teacher::_salary = 6000;
 
 Teacher::Teacher(std::string name, int age) : Worker(name, age) {
     setJob(Profession("Teacher", _salary));
+    if (LOGGING) {
+        std::cout << "Oooooooooooooooo.\n";
+    }
 }
 
 //Teacher::Teacher(std::string name, std::string degree) : Worker(name) {
