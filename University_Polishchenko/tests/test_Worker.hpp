@@ -9,7 +9,6 @@
 #ifndef test_Worker_hpp
 #define test_Worker_hpp
 
-#include <iostream>
 #include "../src/Worker.hpp"
 
 int testWorker();

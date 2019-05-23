@@ -9,6 +9,7 @@
 #ifndef University_hpp
 #define University_hpp
 
-#include <stdio.h>
+#include <iostream>
+
 
 #endif /* University_hpp */

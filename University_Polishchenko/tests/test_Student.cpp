@@ -47,6 +47,5 @@ int testStudent() {
         return -1;
     }
     
-    
     return 0;
 }

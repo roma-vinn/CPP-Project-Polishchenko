@@ -9,7 +9,6 @@
 #ifndef test_RecordBook_hpp
 #define test_RecordBook_hpp
 
-#include <iostream>
 #include "../src/RecordBook.hpp"
 
 int testRecordBook();

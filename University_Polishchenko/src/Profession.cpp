@@ -8,7 +8,7 @@
 
 #include "Profession.hpp"
 
-Profession::Profession(std::string prof_name, int base_rate)
+Profession::Profession(std::string prof_name, float base_rate)
 :_prof_name(prof_name),
 _base_rate(base_rate)
 {
@@ -23,7 +23,7 @@ void Profession::setProfName(std::string prof_name) {
     }
 }
 
-void Profession::setBaseRate(int base_rate) {
+void Profession::setBaseRate(float base_rate) {
     // in case of calling with incorrect base_rate
     if (base_rate < 0) {
         std::cout << "Invalid base rate: " << base_rate <<

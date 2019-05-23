@@ -20,7 +20,7 @@ RecordBook::RecordBook(std::vector<std::string> subjects) {
 }
 
 RecordBook::RecordBook(std::map<std::string, int> record_book) {
-    int avg = 0;
+    float avg = 0;
     for (std::map<std::string, int>::const_iterator it = record_book.begin(),
          end = record_book.end();
          it != end; ++it) {
@@ -43,7 +43,7 @@ void RecordBook::updateSubject(std::string sub_name, int grade_point) {
         _book[sub_name] = grade_point;
         
         // recount avarage grade point
-        int avg = 0;
+        float avg = 0;
         
         for (std::map<std::string, int>::const_iterator it = _book.begin(),
              end = _book.end();

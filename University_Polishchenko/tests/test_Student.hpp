@@ -9,7 +9,6 @@
 #ifndef test_Student_hpp
 #define test_Student_hpp
 
-#include <iostream>
 #include "../src/Student.hpp"
 
 int testStudent();

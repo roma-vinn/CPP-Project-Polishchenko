@@ -17,18 +17,18 @@
  */
 class Profession {
 public:
-    Profession(std::string prof_name, int base_rate);
+    Profession(std::string prof_name, float base_rate);
     ~Profession() {};
     std::string getProfName() { return _prof_name; };
-    int getBaseRate() { return _base_rate; };
+    float getBaseRate() { return _base_rate; };
     void setProfName(std::string prof_name);
-    void setBaseRate(int base_rate);
+    void setBaseRate(float base_rate);
 private:
     // name (title) of the profession
     std::string _prof_name = "";
     
     // minimal income for this proffesion per month
-    int _base_rate = 0;
+    float _base_rate = 0;
 };
 
 #endif /* Profession_hpp */
