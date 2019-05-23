@@ -15,6 +15,8 @@
 #include "Student.hpp"
 
 int console_mode();
-void showVector(std::vector<Human*> vect);
+int read_from_console(std::vector<Teacher*> & all_teachers,
+                      std::vector<Worker*> & all_workers,
+                      std::vector<Student*> & all_students);
 
 #endif /* University_hpp */
