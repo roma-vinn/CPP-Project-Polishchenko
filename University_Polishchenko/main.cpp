@@ -26,7 +26,8 @@ int main(int argc, const char * argv[]) {
         cout << "3. Input from file.\n";
         cout << "4. Prepared example.\n";
         cout << "0. Exit.\n";
-        cin >> choice;
+        choice = read_int();
+//        cin >> choice;
         switch (choice) {
             case 1:
                 if (tests()) {

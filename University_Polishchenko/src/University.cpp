@@ -17,12 +17,27 @@ void _showVector(vector<T*> vect) {
     }
 }
 
+int read_int(){
+    int num = 0;
+    string s_num = "0";
+    
+    getline(cin, s_num, '\n');
+    if (isdigit(s_num[0])) {
+        num = stoi(s_num);
+        
+    } else {
+        cout << "Incorrect input: should be integer. 0 will be used instead.\n";
+    }
+    return num;
+}
+
 int _read_from_console(vector<Teacher*> & all_teachers,
                        vector<Worker*> & all_workers,
                        vector<Student*> & all_students){
     int count = 0;
     cout << "Enter the number of Workers in University: ";
-    cin >> count;
+//    cin >> count;
+    count = read_int();
     if (count < 0) {
         cout << "Incorrect number: " << count <<
         ". Should be not less than 0.\n";
@@ -37,15 +52,15 @@ int _read_from_console(vector<Teacher*> & all_teachers,
             cout << "Name: ";
             getline(cin, name, '\n');
             cout << "Age: ";
-            cin >> age;
+            age = read_int();
             cout << "Job: ";
             getline(cin, job_name, '\n');
             
             if (job_name.length() > 0 && job_name!= "None") {
                 cout << "Base rate: ";
-                cin >> base_rate;
+                base_rate = read_int();
                 cout << "Seniority: ";
-                cin >> seniority;
+                seniority = read_int();
             } else {
                 job_name = "None";
             }
@@ -54,7 +69,7 @@ int _read_from_console(vector<Teacher*> & all_teachers,
         }
         
         cout << "Enter the number of Teachers in University: ";
-        cin >> count;
+        count = read_int();
         if (count < 0) {
             cout << "Incorrect number: " << count <<
             ". Should be not less than 0.\n";
@@ -69,12 +84,12 @@ int _read_from_console(vector<Teacher*> & all_teachers,
                 cout << "Name: ";
                 getline(cin, name, '\n');
                 cout << "Age: ";
-                cin >> age;
+                age = read_int();
                 cout << "Degree: ";
-                cin >> degree;
+                getline(cin, degree, '\n');
                 Teacher* t = new Teacher(name, age, degree);
                 cout << "Enter the number of this teacher's students: ";
-                cin >> student_number;
+                student_number = read_int();
                 if (student_number < 0) {
                     cout << "Incorrect number: " << count <<
                     ". Should be not less than 0.\n";
@@ -88,9 +103,9 @@ int _read_from_console(vector<Teacher*> & all_teachers,
                         cout << "Name: ";
                         getline(cin, name, '\n');
                         cout << "Age: ";
-                        cin >> age;
+                        age = read_int();
                         cout << "Number of subjects: ";
-                        cin >> sub_number;
+                        sub_number = read_int();
                         if (sub_number < 0) {
                             cout << "Incorrect number: " << count <<
                             ". Should be not less than 0.\n";
@@ -101,7 +116,7 @@ int _read_from_console(vector<Teacher*> & all_teachers,
                                 cout << "Subject name: ";
                                 getline(cin, sub_name, '\n');
                                 cout << "Grade point for " << sub_name << ": ";
-                                cin >> grade_point;
+                                grade_point = read_int();
                                 rb.updateSubject(sub_name, grade_point);
                             }
                         }
@@ -152,7 +167,7 @@ int console_mode() {
         cout << "9. Add student.\n";
         cout << "10. Show overall statistics.\n";
         cout << "0. Exit.\n";
-        cin >> choice;
+        choice = read_int();
         
         switch (choice) {
             case 1:
@@ -160,7 +175,7 @@ int console_mode() {
                 _showVector(all_workers);
                 break;
                 
-                // TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+            
             default:
                 break;
         }

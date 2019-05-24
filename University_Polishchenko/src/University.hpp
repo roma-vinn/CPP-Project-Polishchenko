@@ -17,5 +17,6 @@
 using namespace std;
 
 int console_mode();
+int read_int();
 
 #endif /* University_hpp */
