@@ -13,13 +13,13 @@ int testTeacher() {
         map<string, int> records {{"Math", 100}, {"History", 80}};
         RecordBook rb(records);
         
-        Student s1("Student1", 20, rb);
+        Student s1("Student1", 20, "", rb);
         
         rb.updateSubject("History", 90);
-        Student s2("Student2", 22, rb);
+        Student s2("Student2", 22, "", rb);
         
         rb.updateSubject("Biology", 50);
-        Student s3("Student3", 21, rb);
+        Student s3("Student3", 21, "", rb);
         
         // test constructors
         Teacher t1("Teacher1", 28);
@@ -58,6 +58,9 @@ int testTeacher() {
         if (t1.getAvgGradePoint() != 92.5 || t2.getAvgGradePoint() != 85) {
             throw ;
         }
+        
+        // test 'showStudents'
+        t1.showStudents();
     
         
     } catch (...) {

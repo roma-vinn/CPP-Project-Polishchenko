@@ -1,0 +1,3 @@
+Worker 1, 29, Cleaner, 3400, 8
+Worker 2, 30, Repairman, 4800, 12
+Worker 3, 46, Watchman, 4000, 3

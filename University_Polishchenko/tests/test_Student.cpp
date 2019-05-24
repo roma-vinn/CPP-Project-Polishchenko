@@ -15,8 +15,8 @@ int testStudent() {
         // test constructors
         Student s1("Student1", 19);
         Student s2("Student2", 21, "TestJob1", 2500);
-        Student s3("Student3", 23, "TestJob2", 2400, rb);
-        Student s4("Student4", 20, rb);
+        Student s3("Student3", 23, "TestJob2", 2400, "Georgiy Shevchenko", rb);
+        Student s4("Student4", 20, "Oksana Bezushchak", rb);
         
         // test 'getAvgGradePoint' and correctness of result
         if (s1.getAvgGradePoint() != 0 || s3.getAvgGradePoint() != 90) {
@@ -38,8 +38,11 @@ int testStudent() {
             throw ;
         }
         
-        string res = "Student1, 19 years, None, 0 years seniority, 2400.000000 income, 2400.000000 scholarship (agp - 100.000000), ";
-        if (s1.getInfo() != res) {
+        string res1 = "Student1, 19 years, None, 0 years seniority, 2400.000000 income, 2400.000000 scholarship (agp - 100.000000), ",
+        res4 = "Student4, 20 years, None, 0 years seniority, 2400.000000 income, 2400.000000 scholarship (agp - 90.000000), Oksana Bezushchak's student, ";
+        
+        // test 'getInfo' and correctness of results
+        if (s1.getInfo() != res1 || s4.getInfo() != res4) {
             throw ;
         }
         

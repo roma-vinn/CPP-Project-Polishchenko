@@ -22,9 +22,9 @@ public:
 //    Student(string name, string job_name, float base_rate);
     Student(string name, int age, string job_name, float base_rate);
     Student(string name, int age, string job_name,
-            float base_rate, RecordBook record_book);
+            float base_rate, string teacher_name, RecordBook record_book);
 //    Student(string name, RecordBook record_book);
-    Student(string name, int age, RecordBook record_book);
+    Student(string name, int age, string teacher_name, RecordBook record_book);
     
     RecordBook getRecordBook() { return _record_book; };
     void setRecordBook(RecordBook record_book);
@@ -33,12 +33,14 @@ public:
     void showRecordBook();
     float getAvgGradePoint() { return _record_book.getAvgGradePoint(); };
     float income();
+    void updateTeacherName(string new_teacher);
 
     string getInfo();
     
 private:
     RecordBook _record_book;
     float _get_scholarship();
+    string _teacher_name = "";
 };
 
 #endif /* Student_hpp */

@@ -36,7 +36,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		30527FDB2296D285002BFCF5 /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		30527FF422988877002BFCF5 /* workers_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = workers_input.txt; sourceTree = "<group>"; };
+		30527FF52298888D002BFCF5 /* teachers_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = teachers_input.txt; sourceTree = "<group>"; };
+		30527FF62298889F002BFCF5 /* students_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = students_input.txt; sourceTree = "<group>"; };
 		3062A9CD2290970A000B5807 /* University_Polishchenko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = University_Polishchenko; sourceTree = BUILT_PRODUCTS_DIR; };
 		3062A9D02290970A000B5807 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3062A9DA229097DA000B5807 /* University.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = University.cpp; sourceTree = "<group>"; };
@@ -100,7 +102,9 @@
 				3062A9D92290977D000B5807 /* tests */,
 				3062A9D722909764000B5807 /* src */,
 				3062A9D02290970A000B5807 /* main.cpp */,
-				30527FDB2296D285002BFCF5 /* input.txt */,
+				30527FF422988877002BFCF5 /* workers_input.txt */,
+				30527FF52298888D002BFCF5 /* teachers_input.txt */,
+				30527FF62298889F002BFCF5 /* students_input.txt */,
 			);
 			path = University_Polishchenko;
 			sourceTree = "<group>";

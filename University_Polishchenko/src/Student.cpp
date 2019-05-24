@@ -12,7 +12,8 @@
 //{
 //}
 
-Student::Student(string name, int age) : Worker(name, age)
+Student::Student(string name, int age) :
+Worker(name, age)
 {
 }
 
@@ -22,14 +23,17 @@ Student::Student(string name, int age) : Worker(name, age)
 //}
 
 Student::Student(string name, int age, string job_name,
-                 float base_rate) : Worker(name, age, job_name, base_rate)
+                 float base_rate) :
+Worker(name, age, job_name, base_rate)
 {
 }
 
 Student::Student(string name, int age, string job_name, float base_rate,
-                 RecordBook record_book) : Worker(name, age, job_name, base_rate)
+                 string teacher_name, RecordBook record_book) :
+Worker(name, age, job_name, base_rate)
 {
     _record_book = record_book;
+    _teacher_name = teacher_name;
 }
 
 //Student::Student(string name, RecordBook record_book) : Worker(name)
@@ -38,9 +42,11 @@ Student::Student(string name, int age, string job_name, float base_rate,
 //}
 
 Student::Student(string name, int age,
-                 RecordBook record_book) : Worker(name, age)
+                 string teacher_name, RecordBook record_book) :
+Worker(name, age)
 {
     _record_book = record_book;
+    _teacher_name = teacher_name;
 }
 
 void Student::setRecordBook(RecordBook record_book) {
@@ -59,9 +65,20 @@ float Student::income(){
     return Worker::income() + _get_scholarship();
 }
 
+void Student::updateTeacherName(string new_teacher) {
+    _teacher_name = new_teacher;
+}
+
+
 string Student::getInfo() {
-    return Worker::getInfo() + to_string(_get_scholarship())
+    string output = Worker::getInfo() + to_string(_get_scholarship())
     + " scholarship (agp - " + to_string(getAvgGradePoint()) + "), ";
+   
+    if (_teacher_name.length() > 0) {
+        output += _teacher_name + "'s student, ";
+    }
+    
+    return output;
 }
 
 float Student::_get_scholarship() {

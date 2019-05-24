@@ -79,6 +79,7 @@ float Teacher::income() {
 
 void Teacher::addStudent(Student& student) {
     _students.push_back(&student);
+    student.updateTeacherName(getName());
 }
 
 void Teacher::removeStudent(string st_name) {
