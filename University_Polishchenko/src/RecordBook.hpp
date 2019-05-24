@@ -14,10 +14,9 @@
 #include <vector>
 #include <map>
 
-/*
- TODO: write short description
- 0 - 100
- */
+using namespace std;
+
+// points from 0 to 100
 class RecordBook {
 public:
     RecordBook() {};

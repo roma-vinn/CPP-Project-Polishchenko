@@ -16,30 +16,32 @@
 #include "Worker.hpp"
 #include "Student.hpp"
 
+using namespace std;
+
 class Teacher : public Worker {
 public:
-//    Teacher(std::string name);
-    Teacher(std::string name, int age);
-//    Teacher(std::string name, std::string degree);
-    Teacher(std::string name, int age, std::string degree);
+//    Teacher(string name);
+    Teacher(string name, int age);
+//    Teacher(string name, string degree);
+    Teacher(string name, int age, string degree);
 
     ~Teacher() {};
-    void setDegree(std::string degree);
-    std::string getDegree() { return _degree; };
+    void setDegree(string degree);
+    string getDegree() { return _degree; };
 
     float income();
     
     void addStudent(Student& student);
-    void removeStudent(std::string st_name);
+    void removeStudent(string st_name);
     void showStudents();
     
     float getAvgGradePoint();
     
-    std::string getInfo();
+    string getInfo();
 private:
-    std::string _degree = "None";
-    std::vector<Student*> _students;
-    static const std::map<std::string, float> _degreeFactor;
+    string _degree = "None";
+    vector<Student*> _students;
+    static const map<string, float> _degreeFactor;
     static const float _salary;
 };
 

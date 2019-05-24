@@ -10,7 +10,7 @@
 
 int testTeacher() {
     try {
-        std::map<std::string, int> records {{"Math", 100}, {"History", 80}};
+        map<string, int> records {{"Math", 100}, {"History", 80}};
         RecordBook rb(records);
         
         Student s1("Student1", 20, rb);
@@ -26,8 +26,8 @@ int testTeacher() {
         Teacher t2("Teacher2", 36, "Master");
         
         // test 'getInfo' and correctness of results
-        std::string res1 = "Teacher1, 28 years, Teacher, 0 years seniority, 6000.000000 income, None degree, ";
-        std::string res2 = "Teacher2, 36 years, Teacher, 0 years seniority, 7200.000488 income, Master degree, ";
+        string res1 = "Teacher1, 28 years, Teacher, 0 years seniority, 6000.000000 income, None degree, ";
+        string res2 = "Teacher2, 36 years, Teacher, 0 years seniority, 7200.000488 income, Master degree, ";
         if (t1.getInfo() != res1 || t2.getInfo() != res2) {
             throw ;
         }
@@ -39,7 +39,7 @@ int testTeacher() {
         }
         
         // test 'income' and correctness of result
-//        std::cout << t1.income();
+//        cout << t1.income();
         if (t1.income() - 7200 > 0.001) {
             throw ;
         }

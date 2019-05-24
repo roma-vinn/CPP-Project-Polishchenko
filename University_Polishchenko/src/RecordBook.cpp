@@ -8,9 +8,9 @@
 
 #include "RecordBook.hpp"
 
-RecordBook::RecordBook(std::vector<std::string> subjects) {
+RecordBook::RecordBook(vector<string> subjects) {
     // initialization of empty record book
-    for (std::vector<std::string>::const_iterator it = subjects.begin(),
+    for (vector<string>::const_iterator it = subjects.begin(),
          end = subjects.end();
          it != end; ++it) {
         _book[*it] = 0;
@@ -19,13 +19,13 @@ RecordBook::RecordBook(std::vector<std::string> subjects) {
     _grade_point_avg = 0;
 }
 
-RecordBook::RecordBook(std::map<std::string, int> record_book) {
+RecordBook::RecordBook(map<string, int> record_book) {
     float avg = 0;
-    for (std::map<std::string, int>::const_iterator it = record_book.begin(),
+    for (map<string, int>::const_iterator it = record_book.begin(),
          end = record_book.end();
          it != end; ++it) {
         if (it->second > 100 || it->second < 0) {
-            std::cout << "Invalid grade point: " << it->second <<
+            cout << "Invalid grade point: " << it->second <<
             " for " << it->first << ". Should be from 0 to 100.\n";
         } else {
             _book[it->first] = it->second;
@@ -35,9 +35,9 @@ RecordBook::RecordBook(std::map<std::string, int> record_book) {
     _grade_point_avg = avg / record_book.size();
 }
 
-void RecordBook::updateSubject(std::string sub_name, int grade_point) {
+void RecordBook::updateSubject(string sub_name, int grade_point) {
     if (grade_point < 0 || grade_point > 100) {
-        std::cout << "Invalid grade point: " << grade_point <<
+        cout << "Invalid grade point: " << grade_point <<
         ". Should be from 0 to 100.\n";
     } else {
         _book[sub_name] = grade_point;
@@ -45,7 +45,7 @@ void RecordBook::updateSubject(std::string sub_name, int grade_point) {
         // recount avarage grade point
         float avg = 0;
         
-        for (std::map<std::string, int>::const_iterator it = _book.begin(),
+        for (map<string, int>::const_iterator it = _book.begin(),
              end = _book.end();
              it != end; ++it) {
             avg += it->second;
@@ -55,13 +55,13 @@ void RecordBook::updateSubject(std::string sub_name, int grade_point) {
     }
 }
 
-std::string RecordBook::getRepr() {
-    std::string repr = "";
-    for (std::map<std::string, int>::const_iterator it = _book.begin(),
+string RecordBook::getRepr() {
+    string repr = "";
+    for (map<string, int>::const_iterator it = _book.begin(),
          end = _book.end();
          it != end; ++it) {
-        repr += it->first + " - " + std::to_string(it->second) + '\n';
+        repr += it->first + " - " + to_string(it->second) + '\n';
     }
-    repr += "Grade point avarage - " + std::to_string(_grade_point_avg) + '\n';
+    repr += "Grade point avarage - " + to_string(_grade_point_avg) + '\n';
     return repr;
 }

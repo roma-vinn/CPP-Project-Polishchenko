@@ -11,6 +11,8 @@
 
 #include "../src/Teacher.hpp"
 
+using namespace std;
+
 int testTeacher();
 
 #endif /* test_Teacher_hpp */

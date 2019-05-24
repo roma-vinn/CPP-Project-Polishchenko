@@ -10,7 +10,7 @@
 
 extern bool LOGGING;
 
-const std::map<std::string, float> Teacher::_degreeFactor {
+const map<string, float> Teacher::_degreeFactor {
     {"None", 1.0},
     {"Bachelor", 1.1},
     {"Master", 1.2},
@@ -19,31 +19,31 @@ const std::map<std::string, float> Teacher::_degreeFactor {
 
 const float Teacher::_salary = 6000;
 
-//Teacher::Teacher(std::string name) : Worker(name) {
+//Teacher::Teacher(string name) : Worker(name) {
 //    setJob("Teacher", _salary);
 //}
 
-Teacher::Teacher(std::string name, int age) : Worker(name, age) {
+Teacher::Teacher(string name, int age) : Worker(name, age) {
     setJob(Profession("Teacher", _salary));
     if (LOGGING) {
-        std::cout << "Oooooooooooooooo.\n";
+        cout << "Oooooooooooooooo.\n";
     }
 }
 
-//Teacher::Teacher(std::string name, std::string degree) : Worker(name) {
+//Teacher::Teacher(string name, string degree) : Worker(name) {
 //    setJob("Teacher", _salary);
 //    setDegree(degree);
 //}
 
-Teacher::Teacher(std::string name, int age,
-                 std::string degree) : Worker(name, age) {
+Teacher::Teacher(string name, int age,
+                 string degree) : Worker(name, age) {
     setJob(Profession("Teacher", _salary));
     setDegree(degree);
 }
 
-void Teacher::setDegree(std::string degree) {
+void Teacher::setDegree(string degree) {
     bool found = false;
-    for (std::map<std::string, float>::const_iterator it = _degreeFactor.begin(),
+    for (map<string, float>::const_iterator it = _degreeFactor.begin(),
          end = _degreeFactor.end()
          ; it != end; ++it) {
         if (degree == it->first) {
@@ -52,14 +52,14 @@ void Teacher::setDegree(std::string degree) {
         }
     }
     if (!found) {
-        std::cout << "Incorrect degree: " << degree <<
+        cout << "Incorrect degree: " << degree <<
         ". Should be one of the next one:";
-        for (std::map<std::string, float>::const_iterator it = _degreeFactor.begin(),
+        for (map<string, float>::const_iterator it = _degreeFactor.begin(),
              end = _degreeFactor.end()
              ; it != end; ++it) {
-            std::cout << it->first << ' ';
+            cout << it->first << ' ';
         }
-        std::cout << std::endl;
+        cout << endl;
     } else {
         _degree = degree;
     }
@@ -72,7 +72,7 @@ float Teacher::income() {
 }
 
 //void addStudent(Student student);
-//void removeStudent(std::string st_name);
+//void removeStudent(string st_name);
 //void showStudentList();
 //
 //float getAvgGradePoint();
@@ -81,8 +81,8 @@ void Teacher::addStudent(Student& student) {
     _students.push_back(&student);
 }
 
-void Teacher::removeStudent(std::string st_name) {
-    for (std::vector<Student*>::const_iterator it = _students.begin(),
+void Teacher::removeStudent(string st_name) {
+    for (vector<Student*>::const_iterator it = _students.begin(),
          end = _students.end();
          it != end; ++it) {
         if ((*it)->getName() == st_name) {
@@ -93,11 +93,11 @@ void Teacher::removeStudent(std::string st_name) {
 }
 
 void Teacher::showStudents() {
-    std::cout << "Students of " << getName() << ":\n";
-    for (std::vector<Student*>::const_iterator it = _students.begin(),
+    cout << "Students of " << getName() << ":\n";
+    for (vector<Student*>::const_iterator it = _students.begin(),
          end = _students.end();
          it != end; ++it) {
-        std::cout << (*it)->getInfo() << std::endl;
+        cout << (*it)->getInfo() << endl;
     }
 }
 
@@ -114,7 +114,7 @@ float Teacher::getAvgGradePoint() {
     return avg_gp;
 }
 
-std::string Teacher::getInfo() {
+string Teacher::getInfo() {
     return Worker::getInfo() + _degree + " degree, ";
 }
 

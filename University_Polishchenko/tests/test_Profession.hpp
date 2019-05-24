@@ -11,6 +11,8 @@
 
 #include "../src/Profession.hpp"
 
+using namespace std;
+
 int testProfession();
 
 #endif /* test_Profession_hpp */

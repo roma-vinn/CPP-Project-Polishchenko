@@ -12,27 +12,29 @@
 #include <iostream>
 #include <string>
 
+using namespace std;
+
 /*
  Abstract Human class.
  
  Has 'name' and 'age' properties with
- corresponding getters [std::string getName(), int getAge()]
- and setters [setName(std::string name), setAge(int age)].
+ corresponding getters [string getName(), int getAge()]
+ and setters [setName(string name), setAge(int age)].
  */
 class Human {
 public:
-//    Human(std::string name);
-    Human(std::string name, int age);
+//    Human(string name);
+    Human(string name, int age);
     ~Human() {};
-    std::string getName() { return _name; };
+    string getName() { return _name; };
     int getAge() { return _age; };
-    void setName(std::string name);
+    void setName(string name);
     void setAge(int age);
     virtual float income() = 0;
     
-    virtual std::string getInfo();
+    virtual string getInfo();
 private:
-    std::string _name = "";
+    string _name = "";
     int _age = 0;
 };
 

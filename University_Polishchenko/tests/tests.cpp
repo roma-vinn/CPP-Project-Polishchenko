@@ -12,38 +12,38 @@ int tests() {
     bool success = true;
     
     if (testWorker()) {
-        std::cout << "WORKER CLASS TEST FAILED!\n";
+        cout << "WORKER CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Worker class test passed...\n";
+        cout << "Worker class test passed...\n";
     }
     
     if (testRecordBook()) {
-        std::cout << "RECORDBOOK CLASS TEST FAILED!\n";
+        cout << "RECORDBOOK CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "RecordBook class test passed...\n";
+        cout << "RecordBook class test passed...\n";
     }
     
     if (testProfession()) {
-        std::cout << "PROFESSION CLASS TEST FAILED!\n";
+        cout << "PROFESSION CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Profession class test passed...\n";
+        cout << "Profession class test passed...\n";
     }
     
     if (testStudent()) {
-        std::cout << "STUDENT CLASS TEST FAILED!\n";
+        cout << "STUDENT CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Student class test passed...\n";
+        cout << "Student class test passed...\n";
     }
     
     if (testTeacher()) {
-        std::cout << "TEACHER CLASS TEST FAILED!\n";
+        cout << "TEACHER CLASS TEST FAILED!\n";
         success = false;
     } else {
-        std::cout << "Teacher class test passed...\n";
+        cout << "Teacher class test passed...\n";
     }
     
     if (!success) {

@@ -12,20 +12,20 @@
 #include <iostream>
 #include <string>
 
-/*
- TODO: write short description
- */
+using namespace std;
+
+
 class Profession {
 public:
-    Profession(std::string prof_name, float base_rate);
+    Profession(string prof_name, float base_rate);
     ~Profession() {};
-    std::string getProfName() { return _prof_name; };
+    string getProfName() { return _prof_name; };
     float getBaseRate() { return _base_rate; };
-    void setProfName(std::string prof_name);
+    void setProfName(string prof_name);
     void setBaseRate(float base_rate);
 private:
     // name (title) of the profession
-    std::string _prof_name = "";
+    string _prof_name = "";
     
     // minimal income for this proffesion per month
     float _base_rate = 0;

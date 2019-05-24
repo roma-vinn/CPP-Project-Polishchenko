@@ -9,44 +9,43 @@
 #include "University.hpp"
 
 //extern bool flag;
-
 template<typename T>
-void showVector(std::vector<T*> vect) {
-    for (typename std::vector<T*>::const_iterator it = vect.begin(),
+void _showVector(vector<T*> vect) {
+    for (typename vector<T*>::const_iterator it = vect.begin(),
          end = vect.end(); it != end; ++it) {
-        std::cout << (*it)->getInfo() << '\n';
+        cout << (*it)->getInfo() << '\n';
     }
 }
 
-int read_from_console(std::vector<Teacher*> & all_teachers,
-                      std::vector<Worker*> & all_workers,
-                      std::vector<Student*> & all_students){
+int _read_from_console(vector<Teacher*> & all_teachers,
+                       vector<Worker*> & all_workers,
+                       vector<Student*> & all_students){
     int count = 0;
-    std::cout << "Enter the number of Workers in University: ";
-    std::cin >> count;
+    cout << "Enter the number of Workers in University: ";
+    cin >> count;
     if (count < 0) {
-        std::cout << "Incorrect number: " << count <<
+        cout << "Incorrect number: " << count <<
         ". Should be not less than 0.\n";
         return 1;
     } else {
         for (int i = 1; i < count + 1; ++i) {
             
             int age = 0, base_rate = 0, seniority = 0;
-            std::string name = "", job_name="None";
+            string name = "", job_name="None";
             
-            std::cout << "Worker " << i << ":\n";
-            std::cout << "Name: ";
-            std::cin >> name;
-            std::cout << "Age: ";
-            std::cin >> age;
-            std::cout << "Job: ";
-            std::cin >> job_name;
+            cout << "Worker " << i << ":\n";
+            cout << "Name: ";
+            getline(cin, name, '\n');
+            cout << "Age: ";
+            cin >> age;
+            cout << "Job: ";
+            getline(cin, job_name, '\n');
             
             if (job_name.length() > 0 && job_name!= "None") {
-                std::cout << "Base rate: ";
-                std::cin >> base_rate;
-                std::cout << "Seniority: ";
-                std::cin >> seniority;
+                cout << "Base rate: ";
+                cin >> base_rate;
+                cout << "Seniority: ";
+                cin >> seniority;
             } else {
                 job_name = "None";
             }
@@ -54,55 +53,55 @@ int read_from_console(std::vector<Teacher*> & all_teachers,
                                              base_rate, seniority));
         }
         
-        std::cout << "Enter the number of Teachers in University: ";
-        std::cin >> count;
+        cout << "Enter the number of Teachers in University: ";
+        cin >> count;
         if (count < 0) {
-            std::cout << "Incorrect number: " << count <<
+            cout << "Incorrect number: " << count <<
             ". Should be not less than 0.\n";
             return 1;
         } else {
             for (int i = 1; i < count + 1; ++i) {
                 
                 int age = 0, student_number = 0;
-                std::string name = "", degree="None";
+                string name = "", degree="None";
                 
-                std::cout << "Teacher " << i << ":\n";
-                std::cout << "Name: ";
-                std::cin >> name;
-                std::cout << "Age: ";
-                std::cin >> age;
-                std::cout << "Degree: ";
-                std::cin >> degree;
+                cout << "Teacher " << i << ":\n";
+                cout << "Name: ";
+                getline(cin, name, '\n');
+                cout << "Age: ";
+                cin >> age;
+                cout << "Degree: ";
+                cin >> degree;
                 Teacher* t = new Teacher(name, age, degree);
-                std::cout << "Enter the number of this teacher's students: ";
-                std::cin >> student_number;
+                cout << "Enter the number of this teacher's students: ";
+                cin >> student_number;
                 if (student_number < 0) {
-                    std::cout << "Incorrect number: " << count <<
+                    cout << "Incorrect number: " << count <<
                     ". Should be not less than 0.\n";
                     return 1;
                 } else {
-                    std::string name = "";
+                    string name = "";
                     int age = 0, sub_number = 0;
                     RecordBook rb;
                     for (int j = 1; j < student_number + 1; ++j) {
-                        std::cout << "Student " << j << ":\n";
-                        std::cout << "Name: ";
-                        std::cin >> name;
-                        std::cout << "Age: ";
-                        std::cin >> age;
-                        std::cout << "Number of subjects: ";
-                        std::cin >> sub_number;
+                        cout << "Student " << j << ":\n";
+                        cout << "Name: ";
+                        getline(cin, name, '\n');
+                        cout << "Age: ";
+                        cin >> age;
+                        cout << "Number of subjects: ";
+                        cin >> sub_number;
                         if (sub_number < 0) {
-                            std::cout << "Incorrect number: " << count <<
+                            cout << "Incorrect number: " << count <<
                             ". Should be not less than 0.\n";
                         } else {
                             for (int k = 1; k < sub_number + 1; ++k) {
-                                std::string sub_name = "";
+                                string sub_name = "";
                                 int grade_point = 0;
-                                std::cout << "Subject name: ";
-                                std::cin >> sub_name;
-                                std::cout << "Grade point for " << sub_name << ": ";
-                                std::cin >> grade_point;
+                                cout << "Subject name: ";
+                                getline(cin, sub_name, '\n');
+                                cout << "Grade point for " << sub_name << ": ";
+                                cin >> grade_point;
                                 rb.updateSubject(sub_name, grade_point);
                             }
                         }
@@ -120,32 +119,53 @@ int read_from_console(std::vector<Teacher*> & all_teachers,
 }
 
 int console_mode() {
-    std::vector<Teacher*> all_teachers;
-    std::vector<Worker*> all_workers;
-    std::vector<Student*> all_students;
+    vector<Teacher*> all_teachers;
+    vector<Worker*> all_workers;
+    vector<Student*> all_students;
     
-    if (read_from_console(all_teachers, all_workers, all_students)) {
-        std::cout << "Incorrect input.\n";
+    if (_read_from_console(all_teachers, all_workers, all_students)) {
+        cout << "Incorrect input.\n";
         return 1;
     }
+    
+    cout << "All workers:\n";
+    _showVector(all_workers);
+    
+    cout << "All teachers:\n";
+    _showVector(all_teachers);
+    
+    cout << "All students:\n";
+    _showVector(all_students);
     
     bool flag = true;
     int choice = 1;
     while (flag) {
-        std::cout << "";
-        std::cin >> choice;
+        cout << "Choose and type the number of the action below:\n";
+        cout << "1. Show all workers.\n";
+        cout << "2. Show all teachers.\n";
+        cout << "3. Show all students.\n";
+        cout << "4. Show all students of particular teacher.\n";
+        cout << "5. Show avarage grade point of a student.\n";
+        cout << "6. Show particular teacher students' avarage grade point.\n";
+        cout << "7. Add worker.\n";
+        cout << "8. Add teacher.\n";
+        cout << "9. Add student.\n";
+        cout << "10. Show overall statistics.\n";
+        cout << "0. Exit.\n";
+        cin >> choice;
+        
+        switch (choice) {
+            case 1:
+                cout << "All workers:\n";
+                _showVector(all_workers);
+                break;
+                
+                // TODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODOTODO
+            default:
+                break;
+        }
         
     }
-    
-    std::cout << "All workers:\n";
-    showVector(all_workers);
-
-    std::cout << "All teachers:\n";
-    showVector(all_teachers);
-
-    std::cout << "All students:\n";
-    showVector(all_students);
-    
     
     return 0;
 }

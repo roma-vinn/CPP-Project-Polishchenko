@@ -14,25 +14,27 @@
 #include "Profession.hpp"
 #include "Human.hpp"
 
+using namespace std;
+
 class Worker: public Human {
 public:
-//    Worker(std::string name);
-    Worker(std::string name, int age);
-//    Worker(std::string name, std::string job_name, float base_rate);
-    Worker(std::string name, int age, std::string job_name, float base_rate);
-    Worker(std::string name, int age, std::string job_name,
+//    Worker(string name);
+    Worker(string name, int age);
+//    Worker(string name, string job_name, float base_rate);
+    Worker(string name, int age, string job_name, float base_rate);
+    Worker(string name, int age, string job_name,
            float base_rate, int seniority);
-//    Worker(std::string name, int age, Profession profession);
+//    Worker(string name, int age, Profession profession);
     ~Worker() {};
     
-    std::string getJobName() { return _job.getProfName(); };
+    string getJobName() { return _job.getProfName(); };
     void setJob(Profession profession);
     Profession getJob() { return _job; };
     void setExperience(int years) { _experience = years; };
     int getExperience() { return _experience; };
     virtual float income();
     
-    virtual std::string getInfo();
+    virtual string getInfo();
 private:
     // years of work
     int _experience = 0;

@@ -11,6 +11,8 @@
 
 #include "../src/Worker.hpp"
 
+using namespace std;
+
 int testWorker();
 
 #endif /* test_Worker_hpp */

@@ -16,6 +16,8 @@
 #include "test_Student.hpp"
 #include "test_Teacher.hpp"
 
+using namespace std;
+
 int tests();
 
 #endif /* tests_hpp */

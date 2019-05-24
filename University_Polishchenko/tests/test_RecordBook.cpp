@@ -10,8 +10,8 @@
 
 int testRecordBook() {
     try {
-        std::vector<std::string> subjects {"Math", "History"};
-        std::map<std::string, int> record_book {{"Math", 100}, {"History", 80}};
+        vector<string> subjects {"Math", "History"};
+        map<string, int> record_book {{"Math", 100}, {"History", 80}};
         
         // test constructors
         RecordBook rb1;
@@ -30,7 +30,7 @@ int testRecordBook() {
         }
         
         // test 'getRepr' and correctness of result
-        std::string res = "History - 0\nMath - 100\nGrade point avarage - 50.000000\n";
+        string res = "History - 0\nMath - 100\nGrade point avarage - 50.000000\n";
         if (rb2.getRepr() != res) {
             throw ;
         }

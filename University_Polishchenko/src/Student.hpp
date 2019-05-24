@@ -13,26 +13,28 @@
 #include "Worker.hpp"
 #include "RecordBook.hpp"
 
+using namespace std;
+
 class Student : public Worker {
 public:
-//    Student(std::string name);
-    Student(std::string name, int age);
-//    Student(std::string name, std::string job_name, float base_rate);
-    Student(std::string name, int age, std::string job_name, float base_rate);
-    Student(std::string name, int age, std::string job_name,
+//    Student(string name);
+    Student(string name, int age);
+//    Student(string name, string job_name, float base_rate);
+    Student(string name, int age, string job_name, float base_rate);
+    Student(string name, int age, string job_name,
             float base_rate, RecordBook record_book);
-//    Student(std::string name, RecordBook record_book);
-    Student(std::string name, int age, RecordBook record_book);
+//    Student(string name, RecordBook record_book);
+    Student(string name, int age, RecordBook record_book);
     
     RecordBook getRecordBook() { return _record_book; };
     void setRecordBook(RecordBook record_book);
     
-    void updateSubject(std::string sub_name, int grade_point);
+    void updateSubject(string sub_name, int grade_point);
     void showRecordBook();
     float getAvgGradePoint() { return _record_book.getAvgGradePoint(); };
     float income();
 
-    std::string getInfo();
+    string getInfo();
     
 private:
     RecordBook _record_book;

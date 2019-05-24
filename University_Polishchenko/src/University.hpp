@@ -14,9 +14,8 @@
 #include "Teacher.hpp"
 #include "Student.hpp"
 
+using namespace std;
+
 int console_mode();
-int read_from_console(std::vector<Teacher*> & all_teachers,
-                      std::vector<Worker*> & all_workers,
-                      std::vector<Student*> & all_students);
 
 #endif /* University_hpp */

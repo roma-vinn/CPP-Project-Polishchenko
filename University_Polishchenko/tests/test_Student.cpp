@@ -10,7 +10,7 @@
 
 int testStudent() {
     try {
-        std::map<std::string, int> records {{"Math", 100}, {"History", 80}};
+        map<string, int> records {{"Math", 100}, {"History", 80}};
         RecordBook rb(records);
         // test constructors
         Student s1("Student1", 19);
@@ -38,7 +38,7 @@ int testStudent() {
             throw ;
         }
         
-        std::string res = "Student1, 19 years, None, 0 years seniority, 2400.000000 income, 2400.000000 scholarship (agp - 100.000000), ";
+        string res = "Student1, 19 years, None, 0 years seniority, 2400.000000 income, 2400.000000 scholarship (agp - 100.000000), ";
         if (s1.getInfo() != res) {
             throw ;
         }
