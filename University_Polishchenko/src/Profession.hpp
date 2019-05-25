@@ -14,6 +14,8 @@
 
 using namespace std;
 
+extern bool LOGGING;
+extern string logs;
 
 class Profession {
 public:
