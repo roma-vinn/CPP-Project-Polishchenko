@@ -15,13 +15,15 @@ using namespace std;
 // if you want to log
 bool LOGGING = false;
 
-// write path to your files
+// write path to your input files or rewrite existing
 string workers_path = "workers_input.txt";
 string teachers_path = "teachers_input.txt";
 string students_path = "students_input.txt";
 string output_path = "output.txt";
 string logging_path = "logs.txt", logs="";
 
+/* auxilary function that writes logs to the file (if LOGGING is true)
+ */
 void write_logs() {
     if (LOGGING) {
         fstream file(logging_path, ios::out);
@@ -34,7 +36,7 @@ void write_logs() {
 }
 
 int main(int argc, const char * argv[]) {
-    // Logging
+    // need logging ?
     string is_logging = "n";
     cout << "Make logs? y/n: ";
     getline(cin, is_logging, '\n');
@@ -44,7 +46,7 @@ int main(int argc, const char * argv[]) {
         cout << "Incorrect input. Treated like 'n'.\n";
     }
     
-    // Testing
+    // need testing ?
     string is_test = "n";
     cout << "Test modules and functions? y/n: ";
     getline(cin, is_test, '\n');
@@ -63,7 +65,7 @@ int main(int argc, const char * argv[]) {
     vector<Student*> all_students;
     
     int choice = 1;
-    // Input type
+    // what type of input ?
     cout << "Choose and type the number of the action below:\n";
     cout << "1. Console input.\n";
     cout << "2. Input from files.\n";
@@ -116,10 +118,10 @@ int main(int argc, const char * argv[]) {
             }
     }
 
-    // Interact with data
+    // interact with data
     data_accounting(all_workers, all_teachers, all_students);
     
-    // Writing statistics into file
+    // need to write statistics into the file ?
     string is_output = "n";
     cout << "Write statistics into 'output.txt'? y/n: ";
     getline(cin, is_output, '\n');
@@ -133,7 +135,12 @@ int main(int argc, const char * argv[]) {
     } else if (is_output != "n") {
         cout << "Incorrect input. Treated like 'n'.\n";
     }
+    
     cout << "Shutting down...\n";
+    
+    // write logs before exiting (if needed)
     write_logs();
+    
+    // memory will be cleaned automatically within default destructors
     return 0;
 }

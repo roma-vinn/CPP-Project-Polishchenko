@@ -9,6 +9,9 @@
 #include "University.hpp"
 
 
+/* auxilary template function to display information
+ about all elements in the vector
+ */
 template<typename T>
 void _showVector(vector<T*> vect) {
     // logging
@@ -22,7 +25,8 @@ void _showVector(vector<T*> vect) {
     }
 }
 
-// function to count how many particular chars is in the string
+/* function to count how many particular chars is in the string
+ */
 int _count_chars(string str, char chr) {
     // logging
     if (LOGGING) {
@@ -679,7 +683,6 @@ int data_accounting(vector<Worker*> & all_workers,
                 cout << "Incorrect command: should be number [0, 1, .., 10].\n";
                 break;
         }
-        
     }
     return 0;
 }
