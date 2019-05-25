@@ -380,6 +380,49 @@ string overallStatistics(vector<Worker*> & all_workers,
                          vector<Teacher*> & all_teachers,
                          vector<Student*> & all_students){
     string output = "";
+    float all_workers_income = 0,
+    all_teachers_income = 0,
+    all_students_income = 0;
+    int top_scholarship = 0,
+    mid_scholarship = 0;
+    
+    for (int i = 0; i < all_workers.size(); ++i) {
+        all_workers_income += all_workers[i]->income();
+    }
+    
+    for (int i = 0; i < all_teachers.size(); ++i) {
+        all_teachers_income += all_teachers[i]->income();
+    }
+    
+    for (int i = 0; i < all_students.size(); ++i) {
+        all_students_income += all_students[i]->income();
+        if (all_students[i]->getAvgGradePoint() >= 90) {
+            ++top_scholarship;
+        } else if (all_students[i]->getAvgGradePoint() >= 75) {
+            ++mid_scholarship;
+        }
+    }
+    
+    output += "All workers together earning: " +
+    to_string(all_workers_income) + '\n';
+    output += "Avarage workers income: " +
+    to_string(all_workers_income / all_workers.size()) + '\n';
+    
+    output += "All teachers together earning: " +
+    to_string(all_teachers_income) + '\n';
+    output += "Avarage teachers income: " +
+    to_string(all_teachers_income / all_teachers.size()) + '\n';
+    
+    output += "All students together earning: " +
+    to_string(all_students_income) + '\n';
+    output += "Avarage students income: " +
+    to_string(all_students_income / all_students.size()) + '\n';
+    output += "Students that have top scholarship: " +
+    to_string(top_scholarship) + '\n';
+    output += "Students that have middle scholarship: " +
+    to_string(mid_scholarship) + '\n';
+    output += "Students that don't have scholarship: " +
+    to_string(all_students.size() - top_scholarship - mid_scholarship) + '\n';
     
     return output;
 }
@@ -478,7 +521,6 @@ int data_accounting(vector<Worker*> & all_workers,
                 for (vector<Teacher*>::const_iterator it = all_teachers.begin(),
                      end = all_teachers.end(); it != end; ++it) {
                     if ((*it)->getName() == teacher_name) {
-                        // crashes here
                         cout << teacher_name << "'s students avarage grade point - " <<
                         (*it)->getAvgGradePoint() << '\n';
                         found = true;
@@ -582,7 +624,6 @@ int data_accounting(vector<Worker*> & all_workers,
             }
                 
                 // 10. Show overall statistics.
-            // TODO: test it
             case 10:
                 cout << overallStatistics(all_workers, all_teachers, all_students) << '\n';
                 break;

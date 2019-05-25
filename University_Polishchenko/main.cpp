@@ -13,11 +13,13 @@
 using namespace std;
 
 // if you want to log
-bool LOGGING = false;
+//bool LOGGING = false;
+
 // write path to your files
 string workers_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/workers_input.txt";
 string teachers_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/teachers_input.txt";
 string students_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/students_input.txt";
+string output_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/output.txt";
 
 int main(int argc, const char * argv[]) {
     // Logging
