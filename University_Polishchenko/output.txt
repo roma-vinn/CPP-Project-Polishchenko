@@ -1,0 +1,10 @@
+General expenses on the staff and students: 68110.000000
+All workers together earning: 12850.000000
+Avarage workers income: 4283.333496
+All teachers together earning: 26760.000000
+Avarage teachers income: 8920.000000
+All students together earning: 28500.000000
+Avarage students income: 7125.000000
+Students that have top scholarship: 3
+Students that have middle scholarship: 1
+Students that don't have scholarship: 0

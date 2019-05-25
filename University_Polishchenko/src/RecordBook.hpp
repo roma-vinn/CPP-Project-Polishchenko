@@ -15,6 +15,8 @@
 #include <map>
 
 using namespace std;
+extern bool LOGGING;
+extern string logs;
 
 // points from 0 to 100
 class RecordBook {

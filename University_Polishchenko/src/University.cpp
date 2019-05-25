@@ -402,6 +402,8 @@ string overallStatistics(vector<Worker*> & all_workers,
             ++mid_scholarship;
         }
     }
+    output += "General expenses on the staff and students: " +
+    to_string(all_workers_income + all_students_income + all_teachers_income) + '\n';
     
     output += "All workers together earning: " +
     to_string(all_workers_income) + '\n';
@@ -631,7 +633,6 @@ int data_accounting(vector<Worker*> & all_workers,
                 // 0. Exit.
             case 0:
                 flag = false;
-                cout << "Shutting down...\n";
                 break;
                 
             default:

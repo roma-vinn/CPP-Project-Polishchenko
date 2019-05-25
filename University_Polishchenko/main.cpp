@@ -13,24 +13,25 @@
 using namespace std;
 
 // if you want to log
-//bool LOGGING = false;
+bool LOGGING = false;
 
 // write path to your files
-string workers_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/workers_input.txt";
-string teachers_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/teachers_input.txt";
-string students_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/students_input.txt";
-string output_path = "/Users/roman/Documents/Programming/CPP_34/CPP_project_Polishchenko/University_Polishchenko/University_Polishchenko/output.txt";
+string workers_path = "workers_input.txt";
+string teachers_path = "teachers_input.txt";
+string students_path = "students_input.txt";
+string output_path = "output.txt";
+string logging_path = "logs.txt", logs="";
 
 int main(int argc, const char * argv[]) {
     // Logging
-//    string is_logging = "n";
-//    cout << "Make logs? y/n: ";
-//    getline(cin, is_logging, '\n');
-//    if (is_logging == "y") {
-//        LOGGING = true;
-//    } else if (is_logging != "n") {
-//        cout << "Incorrect input. Treated like 'n'.\n";
-//    }
+    string is_logging = "n";
+    cout << "Make logs? y/n: ";
+    getline(cin, is_logging, '\n');
+    if (is_logging == "y") {
+        LOGGING = true;
+    } else if (is_logging != "n") {
+        cout << "Incorrect input. Treated like 'n'.\n";
+    }
     
     // Testing
     string is_test = "n";
@@ -104,5 +105,20 @@ int main(int argc, const char * argv[]) {
     // Interact with data
     data_accounting(all_workers, all_teachers, all_students);
     
+    // Writing statistics into file
+    string is_output = "n";
+    cout << "Write statistics into 'output.txt'? y/n: ";
+    getline(cin, is_output, '\n');
+    if (is_output == "y") {
+        fstream file(output_path, ios::out);
+        if (!file.is_open()) {
+            cout << "File hasn't opened. Check if file path specified correctly.\n";
+        }
+        file << overallStatistics(all_workers, all_teachers, all_students);
+        file.close();
+    } else if (is_output != "n") {
+        cout << "Incorrect input. Treated like 'n'.\n";
+    }
+    cout << "Shutting down...\n";
     return 0;
 }
