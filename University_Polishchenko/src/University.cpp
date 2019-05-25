@@ -11,6 +11,11 @@
 
 template<typename T>
 void _showVector(vector<T*> vect) {
+    // logging
+    if (LOGGING) {
+        logs += "Called '_showVector' function\n";
+    }
+    
     for (typename vector<T*>::const_iterator it = vect.begin(),
          end = vect.end(); it != end; ++it) {
         cout << (*it)->getInfo() << '\n';
@@ -19,6 +24,12 @@ void _showVector(vector<T*> vect) {
 
 // function to count how many particular chars is in the string
 int _count_chars(string str, char chr) {
+    // logging
+    if (LOGGING) {
+        logs += "Called '_count_chars' function with params: <";
+        logs += str + ", " + chr + ">\n";
+    }
+    
     int count = 0;
     
     for (int i = 0; i<str.size(); ++i) {
@@ -31,6 +42,11 @@ int _count_chars(string str, char chr) {
 }
 
 int read_int(){
+    // logging
+    if (LOGGING) {
+        logs += "Called 'read_int' function\n";
+    }
+    
     int num = 0;
     string s_num = "0";
     
@@ -47,6 +63,11 @@ int read_int(){
 int read_from_console(vector<Worker*> & all_workers,
                       vector<Teacher*> & all_teachers,
                       vector<Student*> & all_students){
+    // logging
+    if (LOGGING) {
+        logs += "Called 'read_from_console' function\n";
+    }
+    
     int count = 0;
     cout << "Enter the number of Workers in University: ";
     count = read_int();
@@ -154,6 +175,11 @@ int read_from_files(string workers_path,
                     vector<Teacher*> & all_teachers,
                     vector<Student*> & all_students)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called 'read_from_files' function\n";
+    }
+    
     fstream w_file(workers_path), t_file(teachers_path), s_file(students_path);
     if (!w_file.is_open()) {
         cout << "Workers file hasn't opened.\n";
@@ -366,6 +392,11 @@ void showExistableData(vector<Worker*> & all_workers,
                        vector<Teacher*> & all_teachers,
                        vector<Student*> & all_students)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called 'showExistableData' function\n";
+    }
+    
     cout << "All workers:\n";
     _showVector(all_workers);
     
@@ -379,6 +410,11 @@ void showExistableData(vector<Worker*> & all_workers,
 string overallStatistics(vector<Worker*> & all_workers,
                          vector<Teacher*> & all_teachers,
                          vector<Student*> & all_students){
+    // logging
+    if (LOGGING) {
+        logs += "Called 'overallStatistics' function\n";
+    }
+    
     string output = "";
     float all_workers_income = 0,
     all_teachers_income = 0,
@@ -432,6 +468,10 @@ string overallStatistics(vector<Worker*> & all_workers,
 int data_accounting(vector<Worker*> & all_workers,
                     vector<Teacher*> & all_teachers,
                     vector<Student*> & all_students) {
+    // logging
+    if (LOGGING) {
+        logs += "Called 'data_accounting' function\n";
+    }
     
     // show all existent data
     showExistableData(all_workers, all_teachers, all_students);

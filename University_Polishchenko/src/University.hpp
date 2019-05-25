@@ -16,6 +16,8 @@
 #include "Student.hpp"
 
 using namespace std;
+extern bool LOGGING;
+extern string logs;
 
 int data_accounting(vector<Worker*> & all_workers,
                     vector<Teacher*> & all_teachers,
