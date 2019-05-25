@@ -14,6 +14,9 @@
 
 using namespace std;
 
+extern bool LOGGING;
+extern string logs;
+
 /*
  Abstract Human class.
  

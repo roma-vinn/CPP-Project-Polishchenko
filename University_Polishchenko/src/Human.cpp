@@ -10,6 +10,12 @@
 
 Human::Human(string name, int age)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called Human constructor with params: <";
+        logs += name + ", " + to_string(age) + ">\n";
+    }
+    
     if (name.length() == 0) {
         cout << "Name can`t empty string.\n";
     } else if (age < 0) {
@@ -27,9 +33,21 @@ Human::Human(string name, int age)
 //    } else {
 //        _name = name;
 //    }
+
+//    // logging
+//    if (LOGGING) {
+//        logs += "Called Human constructor with params: <";
+//        logs += name + ">\n";
+//    }
 //}
 
 void Human::setName(string name) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Human method 'setName' with params: <";
+        logs += name + ">\n";
+    }
+    
     // in case of calling with empty string
     if (name.length() == 0) {
         cout << "Invalid name.\n";
@@ -39,6 +57,12 @@ void Human::setName(string name) {
 }
 
 void Human::setAge(int age) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Human method 'setAge' with params: <";
+        logs += to_string(age) + ">\n";
+    }
+    
     // in case of calling with incorrect age
     if (age < 0) {
         cout << "Invalid age: " << age <<
@@ -49,5 +73,10 @@ void Human::setAge(int age) {
 }
 
 string Human::getInfo() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Human method 'getInfo'\n";
+    }
+    
     return _name + ", " + to_string(_age) + " years, ";
 }
