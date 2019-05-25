@@ -39,6 +39,7 @@
 		30527FF422988877002BFCF5 /* workers_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = workers_input.txt; sourceTree = "<group>"; };
 		30527FF52298888D002BFCF5 /* teachers_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = teachers_input.txt; sourceTree = "<group>"; };
 		30527FF62298889F002BFCF5 /* students_input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = students_input.txt; sourceTree = "<group>"; };
+		30527FF822989C54002BFCF5 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		3062A9CD2290970A000B5807 /* University_Polishchenko */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = University_Polishchenko; sourceTree = BUILT_PRODUCTS_DIR; };
 		3062A9D02290970A000B5807 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3062A9DA229097DA000B5807 /* University.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = University.cpp; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 				30527FF422988877002BFCF5 /* workers_input.txt */,
 				30527FF52298888D002BFCF5 /* teachers_input.txt */,
 				30527FF62298889F002BFCF5 /* students_input.txt */,
+				30527FF822989C54002BFCF5 /* README.txt */,
 			);
 			path = University_Polishchenko;
 			sourceTree = "<group>";

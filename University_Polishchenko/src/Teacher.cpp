@@ -36,9 +36,10 @@ Teacher::Teacher(string name, int age) : Worker(name, age) {
 //}
 
 Teacher::Teacher(string name, int age,
-                 string degree) : Worker(name, age) {
+                 string degree, int seniority) : Worker(name, age) {
     setJob(Profession("Teacher", _salary));
     setDegree(degree);
+    setExperience(seniority);
 }
 
 void Teacher::setDegree(string degree) {
@@ -80,6 +81,11 @@ float Teacher::income() {
 void Teacher::addStudent(Student& student) {
     _students.push_back(&student);
     student.updateTeacherName(getName());
+}
+
+void Teacher::addStudent(Student* student) {
+    _students.push_back(student);
+    (*student).updateTeacherName(getName());
 }
 
 void Teacher::removeStudent(string st_name) {

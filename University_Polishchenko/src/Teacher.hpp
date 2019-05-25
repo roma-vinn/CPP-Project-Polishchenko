@@ -23,7 +23,7 @@ public:
 //    Teacher(string name);
     Teacher(string name, int age);
 //    Teacher(string name, string degree);
-    Teacher(string name, int age, string degree);
+    Teacher(string name, int age, string degree, int seniority);
 
     ~Teacher() {};
     void setDegree(string degree);
@@ -32,6 +32,7 @@ public:
     float income();
     
     void addStudent(Student& student);
+    void addStudent(Student* student);
     void removeStudent(string st_name);
     void showStudents();
     

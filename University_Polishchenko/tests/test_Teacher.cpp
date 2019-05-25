@@ -23,7 +23,7 @@ int testTeacher() {
         
         // test constructors
         Teacher t1("Teacher1", 28);
-        Teacher t2("Teacher2", 36, "Master");
+        Teacher t2("Teacher2", 36, "Master", 0);
         
         // test 'getInfo' and correctness of results
         string res1 = "Teacher1, 28 years, Teacher, 0 years seniority, 6000.000000 income, None degree, ";
@@ -61,7 +61,6 @@ int testTeacher() {
         
         // test 'showStudents'
         t1.showStudents();
-    
         
     } catch (...) {
         return -1;

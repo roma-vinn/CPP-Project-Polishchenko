@@ -1,4 +1,4 @@
-Roman, 19, Tutor, 2000, Georgiy Shevchenko, Math:100, History:86, English:94
-Andrew, 20, None, 0, Georgiy Shevchenko, Math:98, History:90, English:100
-Kristina, 19, Tutor, 3500, Anatiliy Petrachuk, Math:100, History:78, English:100
-John, 23, Programmer, 14000, Georgiy Shevchenko, Math:88, History:60, English:98
+Roman, 19, Tutor, 2000, 1, Georgiy Shevchenko, Math:100, History:86, English:94
+Andrew, 20, None, 0, 0, Georgiy Shevchenko, Math:98, History:90, English:100
+Kristina, 19, Tutor, 3500, 3, Anatiliy Petrachuk, Math:100, History:78, English:100
+John, 23, Programmer, 14000, 2, Georgiy Shevchenko, Math:88, History:60, English:98
