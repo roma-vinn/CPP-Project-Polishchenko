@@ -9,15 +9,6 @@
 #include "RecordBook.hpp"
 
 RecordBook::RecordBook(vector<string> subjects) {
-    // initialization of empty record book
-    for (vector<string>::const_iterator it = subjects.begin(),
-         end = subjects.end();
-         it != end; ++it) {
-        _book[*it] = 0;
-    }
-    
-    _grade_point_avg = 0;
-    
     // logging
     if (LOGGING) {
         logs += "Called RecordBook constructor with params: <";
@@ -29,9 +20,31 @@ RecordBook::RecordBook(vector<string> subjects) {
         }
         logs += ">\n";
     }
+    
+    // initialization of empty record book
+    for (vector<string>::const_iterator it = subjects.begin(),
+         end = subjects.end();
+         it != end; ++it) {
+        _book[*it] = 0;
+    }
+    
+    _grade_point_avg = 0;
 }
 
 RecordBook::RecordBook(map<string, int> record_book) {
+    // logging
+    if (LOGGING) {
+        logs += "Called RecordBook constructor with params: <";
+        for (map<string, int>::const_iterator it = record_book.begin(),
+             end = record_book.end(); it != end; ++it) {
+            if (it!=record_book.begin()) {
+                logs += ", ";
+            }
+            logs += it->first + ":" + to_string(it->second);
+        }
+        logs += ">\n";
+    }
+    
     float avg = 0;
     for (map<string, int>::const_iterator it = record_book.begin(),
          end = record_book.end();
@@ -45,22 +58,15 @@ RecordBook::RecordBook(map<string, int> record_book) {
         }
     }
     _grade_point_avg = avg / record_book.size();
-    
-    // logging
-    if (LOGGING) {
-        logs += "Called RecordBook constructor with params: <";
-        for (map<string, int>::const_iterator it = record_book.begin(),
-             end = record_book.end(); it != end; ++it) {
-            if (it!=record_book.begin()) {
-                logs += ", ";
-            }
-            logs += it->first + ":" + to_string(it->second);
-        }
-        logs += ">\n";
-    }
 }
 
 void RecordBook::updateSubject(string sub_name, int grade_point) {
+    // logging
+    if (LOGGING) {
+        logs += "Called RecordBook method 'updateSubject' with params: <";
+        logs += sub_name + ", " + to_string(grade_point) + ">\n";
+    }
+    
     if (grade_point < 0 || grade_point > 100) {
         cout << "Invalid grade point: " << grade_point <<
         ". Should be from 0 to 100.\n";
@@ -78,15 +84,14 @@ void RecordBook::updateSubject(string sub_name, int grade_point) {
         
         _grade_point_avg = avg / _book.size();
     }
-    
-    // logging
-    if (LOGGING) {
-        logs += "Called RecordBook method 'updateSubject' with params: <";
-        logs += sub_name + ", " + to_string(grade_point) + ">\n";
-    }
 }
 
 string RecordBook::getRepr() {
+    // logging
+    if (LOGGING) {
+        logs += "Called RecordBook method 'getRepr'\n";
+    }
+
     string repr = "";
     for (map<string, int>::const_iterator it = _book.begin(),
          end = _book.end();
@@ -94,11 +99,6 @@ string RecordBook::getRepr() {
         repr += it->first + " - " + to_string(it->second) + '\n';
     }
     repr += "Grade point avarage - " + to_string(_grade_point_avg) + '\n';
-    
-    // logging
-    if (LOGGING) {
-        logs += "Called RecordBook method 'getRepr'\n";
-    }
     
     return repr;
 }
