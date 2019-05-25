@@ -11,7 +11,11 @@ Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Worker3, 28TestJob4600.000000>
 Called Profession method 'setProfName' with params: <TestJob>
 Called Profession method 'setBaseRate' with params: <4600.000000>
+Called Worker method 'setJob' with params: <Profession(TestJob, 4600.000000)>
+Called Worker method 'income'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Worker method 'income'
 Called RecordBook constructor with params: <Math, History>
 Called RecordBook constructor with params: <History:80, Math:100>
 Called RecordBook method 'updateSubject' with params: <Math, 100>
@@ -23,73 +27,172 @@ Called RecordBook constructor with params: <History:80, Math:100>
 Called Human constructor with params: <Student1, 19>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student1, 19>
+Called Student constructor with params: <Student1, 19>
 Called Human constructor with params: <Student2, 21>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student2, 21TestJob12500.000000>
 Called Profession method 'setProfName' with params: <TestJob1>
 Called Profession method 'setBaseRate' with params: <2500.000000>
+Called Student constructor with params: <Student2, 21TestJob12500.000000>
 Called Human constructor with params: <Student3, 23>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student3, 23TestJob22400.000000>
 Called Profession method 'setProfName' with params: <TestJob2>
 Called Profession method 'setBaseRate' with params: <2400.000000>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Student3, 23TestJob22400.000000Georgiy ShevchenkoRecordBook(History:80, Math:100)>
 Called Human constructor with params: <Student4, 20>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student4, 20>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Student4, 20Oksana BezushchakRecordBook(History:80, Math:100)>
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'setRecordBook' with params: <Called RecordBook method 'getBook'
+RecordBook(History:80, Math:100)>
+Called Student method 'updateSubject' with params: <History, 100>
 Called RecordBook method 'updateSubject' with params: <History, 100>
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
 Called RecordBook constructor with params: <History:80, Math:100>
 Called Human constructor with params: <Student1, 20>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student1, 20>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Student1, 20RecordBook(History:80, Math:100)>
 Called RecordBook method 'updateSubject' with params: <History, 90>
 Called Human constructor with params: <Student2, 22>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student2, 22>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Student2, 22RecordBook(History:90, Math:100)>
 Called RecordBook method 'updateSubject' with params: <Biology, 50>
 Called Human constructor with params: <Student3, 21>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Student3, 21>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Student3, 21RecordBook(Biology:50, History:90, Math:100)>
 Called Human constructor with params: <Teacher1, 28>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Teacher1, 28>
+Called Teacher constructor with params: <Teacher1, 28>
 Called Profession constructor with params: <Teacher, 6000.000000>
+Called Worker method 'setJob' with params: <Profession(Teacher, 6000.000000)>
 Called Human constructor with params: <Teacher2, 36>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Teacher2, 36>
+Called Teacher constructor with params: <Teacher2, 36Master0>
 Called Profession constructor with params: <Teacher, 6000.000000>
+Called Worker method 'setJob' with params: <Profession(Teacher, 6000.000000)>
+Called Teacher method 'setDegree' with params: <Master>
+Called Teacher method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'setDegree' with params: <Master>
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'addStudent' with params: <Student(Student1)>
+Called Student method 'updateTeacherName' with params: <Teacher1>
+Called Teacher method 'addStudent' with params: <Student(Student2)>
+Called Student method 'updateTeacherName' with params: <Teacher1>
+Called Teacher method 'addStudent' with params: <Student(Student1)>
+Called Student method 'updateTeacherName' with params: <Teacher2>
+Called Teacher method 'addStudent' with params: <Student(Student2)>
+Called Student method 'updateTeacherName' with params: <Teacher2>
+Called Teacher method 'addStudent' with params: <Student(Student3)>
+Called Student method 'updateTeacherName' with params: <Teacher2>
+Called Teacher method 'removeStudent' with params: <Student2>
+Called Teacher method 'getAvgGradePoint'
+Called Teacher method 'getAvgGradePoint'
+Called Teacher method 'showStudents'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called 'read_int' function
+Called 'read_from_files' function
+Called '_count_chars' function with params: <Worker 1, 29, Cleaner, 3400, 8, ,>
 Called Human constructor with params: <Worker 1, 29>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Worker 1, 29Cleaner3400.000000>
 Called Profession method 'setProfName' with params: <Cleaner>
 Called Profession method 'setBaseRate' with params: <3400.000000>
+Called '_count_chars' function with params: <Worker 2, 30, Repairman, 4800, 12, ,>
 Called Human constructor with params: <Worker 2, 30>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Worker 2, 30Repairman4800.000000>
 Called Profession method 'setProfName' with params: <Repairman>
 Called Profession method 'setBaseRate' with params: <4800.000000>
+Called '_count_chars' function with params: <Worker 3, 46, Watchman, 4000, 3, ,>
 Called Human constructor with params: <Worker 3, 46>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Worker 3, 46Watchman4000.000000>
 Called Profession method 'setProfName' with params: <Watchman>
 Called Profession method 'setBaseRate' with params: <4000.000000>
+Called '_count_chars' function with params: <Georgiy Shevchenko, 38, Doctor, 18, ,>
 Called Human constructor with params: <Georgiy Shevchenko, 38>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Georgiy Shevchenko, 38>
+Called Teacher constructor with params: <Georgiy Shevchenko, 38Doctor18>
 Called Profession constructor with params: <Teacher, 6000.000000>
+Called Worker method 'setJob' with params: <Profession(Teacher, 6000.000000)>
+Called Teacher method 'setDegree' with params: <Doctor>
+Called '_count_chars' function with params: <Anatiliy Petrachuk, 45, Doctor, 25, ,>
 Called Human constructor with params: <Anatiliy Petrachuk, 45>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Anatiliy Petrachuk, 45>
+Called Teacher constructor with params: <Anatiliy Petrachuk, 45Doctor25>
 Called Profession constructor with params: <Teacher, 6000.000000>
+Called Worker method 'setJob' with params: <Profession(Teacher, 6000.000000)>
+Called Teacher method 'setDegree' with params: <Doctor>
+Called '_count_chars' function with params: <Stanislav Logvinenko, 24, Bachelor, 4, ,>
 Called Human constructor with params: <Stanislav Logvinenko, 24>
 Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Stanislav Logvinenko, 24>
+Called Teacher constructor with params: <Stanislav Logvinenko, 24Bachelor4>
 Called Profession constructor with params: <Teacher, 6000.000000>
+Called Worker method 'setJob' with params: <Profession(Teacher, 6000.000000)>
+Called Teacher method 'setDegree' with params: <Bachelor>
+Called '_count_chars' function with params: <Roman, 19, Tutor, 2000, 1, Georgiy Shevchenko, Math:100, History:86, English:94, ,>
 Called RecordBook method 'updateSubject' with params: <Math, 100>
 Called RecordBook method 'updateSubject' with params: <History, 86>
 Called RecordBook method 'updateSubject' with params: <English, 94>
@@ -98,6 +201,11 @@ Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Roman, 19Tutor2000.000000>
 Called Profession method 'setProfName' with params: <Tutor>
 Called Profession method 'setBaseRate' with params: <2000.000000>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Roman, 19Tutor2000.000000Georgiy ShevchenkoRecordBook(English:94, History:86, Math:100)>
+Called Teacher method 'addStudent' with params: <Student(Roman)>
+Called Student method 'updateTeacherName' with params: <Georgiy Shevchenko>
+Called '_count_chars' function with params: <Andrew, 20, None, 0, 0, Georgiy Shevchenko, Math:98, History:90, English:100, ,>
 Called RecordBook method 'updateSubject' with params: <Math, 98>
 Called RecordBook method 'updateSubject' with params: <History, 90>
 Called RecordBook method 'updateSubject' with params: <English, 100>
@@ -106,6 +214,11 @@ Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Andrew, 20None0.000000>
 Called Profession method 'setProfName' with params: <None>
 Called Profession method 'setBaseRate' with params: <0.000000>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Andrew, 20None0.000000Georgiy ShevchenkoRecordBook(English:100, History:90, Math:98)>
+Called Teacher method 'addStudent' with params: <Student(Andrew)>
+Called Student method 'updateTeacherName' with params: <Georgiy Shevchenko>
+Called '_count_chars' function with params: <Kristina, 19, Tutor, 3500, 3, Anatiliy Petrachuk, Math:100, History:78, English:100, ,>
 Called RecordBook method 'updateSubject' with params: <Math, 100>
 Called RecordBook method 'updateSubject' with params: <History, 78>
 Called RecordBook method 'updateSubject' with params: <English, 100>
@@ -114,6 +227,11 @@ Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <Kristina, 19Tutor3500.000000>
 Called Profession method 'setProfName' with params: <Tutor>
 Called Profession method 'setBaseRate' with params: <3500.000000>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+Kristina, 19Tutor3500.000000Anatiliy PetrachukRecordBook(English:100, History:78, Math:100)>
+Called Teacher method 'addStudent' with params: <Student(Kristina)>
+Called Student method 'updateTeacherName' with params: <Anatiliy Petrachuk>
+Called '_count_chars' function with params: <John, 23, Programmer, 14000, 2, Georgiy Shevchenko, Math:88, History:60, English:98, ,>
 Called RecordBook method 'updateSubject' with params: <Math, 88>
 Called RecordBook method 'updateSubject' with params: <History, 60>
 Called RecordBook method 'updateSubject' with params: <English, 98>
@@ -122,13 +240,123 @@ Called Profession constructor with params: <None, 0.000000>
 Called Worker constructor with params: <John, 23Programmer14000.000000>
 Called Profession method 'setProfName' with params: <Programmer>
 Called Profession method 'setBaseRate' with params: <14000.000000>
+Called Student constructor with params: <Called RecordBook method 'getBook'
+John, 23Programmer14000.000000Georgiy ShevchenkoRecordBook(English:98, History:60, Math:88)>
+Called Teacher method 'addStudent' with params: <Student(John)>
+Called Student method 'updateTeacherName' with params: <Georgiy Shevchenko>
+Called 'data_accounting' function
+Called 'showExistableData' function
+Called '_showVector' function
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Worker method 'income'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Worker method 'income'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Worker method 'income'
+Called '_showVector' function
+Called Teacher method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called '_showVector' function
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called Student method 'getInfo'
+Called Worker method 'getInfo'
 Called Human method 'getInfo'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method '_get_scholarship'
+Called 'read_int' function
+Called '_showVector' function
+Called Worker method 'getInfo'
+Called Human method 'getInfo'
+Called Worker method 'income'
+Called Worker method 'getInfo'
+Called Human method 'getInfo'
+Called Worker method 'income'
+Called Worker method 'getInfo'
+Called Human method 'getInfo'
+Called Worker method 'income'
+Called 'read_int' function
+Called Teacher method 'getAvgGradePoint'
+Called 'read_int' function
+Called 'overallStatistics' function
+Called Worker method 'income'
+Called Worker method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called 'read_int' function
+Called 'overallStatistics' function
+Called Worker method 'income'
+Called Worker method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Teacher method 'income'
+Called Worker method 'income'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
+Called Student method 'income'
+Called Worker method 'income'
+Called Student method '_get_scholarship'
