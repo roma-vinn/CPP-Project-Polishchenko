@@ -8,8 +8,7 @@
 
 #include "Teacher.hpp"
 
-extern bool LOGGING;
-
+// multiplying salary corresponding to the degree
 const map<string, float> Teacher::_degreeFactor {
     {"None", 1.0},
     {"Bachelor", 1.1},
@@ -17,6 +16,7 @@ const map<string, float> Teacher::_degreeFactor {
     {"Doctor", 1.4}
 };
 
+// teachers' salary
 const float Teacher::_salary = 6000;
 
 //Teacher::Teacher(string name) : Worker(name) {
@@ -24,6 +24,12 @@ const float Teacher::_salary = 6000;
 //}
 
 Teacher::Teacher(string name, int age) : Worker(name, age) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher constructor with params: <";
+        logs += name + ", " + to_string(age) + ">\n";
+    }
+    
     setJob(Profession("Teacher", _salary));
     if (LOGGING) {
         cout << "Oooooooooooooooo.\n";
@@ -37,12 +43,25 @@ Teacher::Teacher(string name, int age) : Worker(name, age) {
 
 Teacher::Teacher(string name, int age,
                  string degree, int seniority) : Worker(name, age) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher constructor with params: <";
+        logs += name + ", " + to_string(age) + degree
+        + to_string(seniority) + ">\n";
+    }
+    
     setJob(Profession("Teacher", _salary));
     setDegree(degree);
     setExperience(seniority);
 }
 
 void Teacher::setDegree(string degree) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'setDegree' with params: <";
+        logs += degree + ">\n";
+    }
+    
     bool found = false;
     for (map<string, float>::const_iterator it = _degreeFactor.begin(),
          end = _degreeFactor.end()
@@ -67,28 +86,45 @@ void Teacher::setDegree(string degree) {
 }
 
 float Teacher::income() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'income'\n";
+    }
+    
     float coef = _degreeFactor.at(_degree);
     float inc = Worker::income();
     return inc * coef;
 }
 
-//void addStudent(Student student);
-//void removeStudent(string st_name);
-//void showStudentList();
-//
-//float getAvgGradePoint();
-
 void Teacher::addStudent(Student& student) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'addStudent' with params: <";
+        logs += "Student(" + student.getName() + ")>\n";
+    }
+    
     _students.push_back(&student);
     student.updateTeacherName(getName());
 }
 
 void Teacher::addStudent(Student* student) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'addStudent' with params: <";
+        logs += "Student(" + student->getName() + ")>\n";
+    }
+    
     _students.push_back(student);
     (*student).updateTeacherName(getName());
 }
 
 void Teacher::removeStudent(string st_name) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'removeStudent' with params: <";
+        logs += st_name + ">\n";
+    }
+    
     for (vector<Student*>::const_iterator it = _students.begin(),
          end = _students.end();
          it != end; ++it) {
@@ -100,6 +136,11 @@ void Teacher::removeStudent(string st_name) {
 }
 
 void Teacher::showStudents() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'showStudents'\n";
+    }
+    
     cout << "Students of " << getName() << ":\n";
     for (vector<Student*>::const_iterator it = _students.begin(),
          end = _students.end();
@@ -109,6 +150,11 @@ void Teacher::showStudents() {
 }
 
 float Teacher::getAvgGradePoint() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'getAvgGradePoint'\n";
+    }
+    
     float avg_gp = 0.0, sum = 0.0;
     size_t count;
     if (_students.size() > 0) {
@@ -122,6 +168,11 @@ float Teacher::getAvgGradePoint() {
 }
 
 string Teacher::getInfo() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Teacher method 'getInfo'\n";
+    }
+    
     return Worker::getInfo() + _degree + " degree, ";
 }
 
