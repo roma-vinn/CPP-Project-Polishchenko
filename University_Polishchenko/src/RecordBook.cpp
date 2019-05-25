@@ -102,3 +102,21 @@ string RecordBook::getRepr() {
     
     return repr;
 }
+
+string RecordBook::getBook(){
+    // logging
+    if (LOGGING) {
+        logs += "Called RecordBook method 'getBook'\n";
+    }
+    
+    string repr = "";
+    for (map<string, int>::const_iterator it = _book.begin(),
+         end = _book.end();
+         it != end; ++it) {
+        if (it != _book.begin()) {
+            repr += ", ";
+        }
+        repr += it->first + ":" + to_string(it->second);
+    }    
+    return repr;
+}

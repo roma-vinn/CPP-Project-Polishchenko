@@ -22,14 +22,15 @@ extern string logs;
 class RecordBook {
 public:
     RecordBook() {};
-    RecordBook(std::vector<std::string> subjects);
-    RecordBook(std::map<std::string, int> record_book);
+    RecordBook(vector<std::string> subjects);
+    RecordBook(map<std::string, int> record_book);
     ~RecordBook() {};
     void updateSubject(std::string sub_name, int grade_point);
     float getAvgGradePoint() { return _grade_point_avg; };
-    std::string getRepr();
+    string getRepr();
+    string getBook();
 private:
-    std::map<std::string, int> _book {};
+    map<string, int> _book {};
     float _grade_point_avg = 0.0;
 };
 

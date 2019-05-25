@@ -15,6 +15,9 @@
 
 using namespace std;
 
+extern bool LOGGING;
+extern string logs;
+
 class Student : public Worker {
 public:
 //    Student(string name);
