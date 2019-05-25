@@ -22,6 +22,17 @@ string students_path = "students_input.txt";
 string output_path = "output.txt";
 string logging_path = "logs.txt", logs="";
 
+void write_logs() {
+    if (LOGGING) {
+        fstream file(logging_path, ios::out);
+        if (!file.is_open()) {
+            cout << "Problem with logging file.\n";
+        } else {
+            file << logs;
+        }
+    }
+}
+
 int main(int argc, const char * argv[]) {
     // Logging
     string is_logging = "n";
@@ -84,12 +95,14 @@ int main(int argc, const char * argv[]) {
                                 all_workers, all_teachers, all_students)) {
                 cout << "Problems with files. Check paths/data style.\n";
                 cout << "Shutting down...\n";
+                write_logs();
                 return 0;
             }
             
             break;
         case 0:
             cout << "Shutting down...\n";
+            write_logs();
             return 0;
             
         default:
@@ -98,6 +111,7 @@ int main(int argc, const char * argv[]) {
                                 all_workers, all_teachers, all_students)) {
                 cout << "Problems with files. Check paths/data style.\n";
                 cout << "Shutting down...\n";
+                write_logs();
                 return 0;
             }
     }
@@ -120,5 +134,6 @@ int main(int argc, const char * argv[]) {
         cout << "Incorrect input. Treated like 'n'.\n";
     }
     cout << "Shutting down...\n";
+    write_logs();
     return 0;
 }

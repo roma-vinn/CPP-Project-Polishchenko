@@ -14,6 +14,11 @@
 
 Worker::Worker(string name, int age) : Human(name, age)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker constructor with params: <";
+        logs += name + ", " + to_string(age) + ">\n";
+    }
 }
 
 //Worker::Worker(string name, string job_name,
@@ -26,6 +31,13 @@ Worker::Worker(string name, int age) : Human(name, age)
 Worker::Worker(string name, int age,
                string job_name, float base_rate) : Human(name, age)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker constructor with params: <";
+        logs += name + ", " + to_string(age) + job_name
+        + to_string(base_rate) + ">\n";
+    }
+    
     _job.setProfName(job_name);
     _job.setBaseRate(base_rate);
 }
@@ -33,6 +45,13 @@ Worker::Worker(string name, int age,
 Worker::Worker(string name, int age, string job_name,
                float base_rate, int seniority) : Human(name, age)
 {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker constructor with params: <";
+        logs += name + ", " + to_string(age) + job_name
+        + to_string(base_rate) + ">\n";
+    }
+    
     _job.setProfName(job_name);
     _job.setBaseRate(base_rate);
     setExperience(seniority);
@@ -44,6 +63,13 @@ Worker::Worker(string name, int age, string job_name,
 //}
 
 void Worker::setJob(Profession profession) {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker method 'setJob' with params: <";
+        logs += "Profession(" + profession.getProfName() + ", " +
+        to_string(profession.getBaseRate())+ ")>\n";
+    }
+    
     _job = profession;
 }
 
@@ -53,10 +79,20 @@ void Worker::setJob(Profession profession) {
  as +5% for every 5 years of work.
  */
 float Worker::income() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker method 'income'\n";
+    }
+    
     return _job.getBaseRate() * (1 + static_cast<int>(_experience / 5) * 0.05);
 }
 
 string Worker::getInfo() {
+    // logging
+    if (LOGGING) {
+        logs += "Called Worker method 'getInfo'\n";
+    }
+    
     return Human::getInfo() + _job.getProfName() + ", "
     + to_string(_experience) + " years seniority, "
     + to_string(income()) + " income, ";

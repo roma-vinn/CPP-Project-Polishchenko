@@ -1,0 +1,134 @@
+Called Human constructor with params: <Worker1, 25>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker1, 25>
+Called Human constructor with params: <Worker2, 28>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker2, 28TestJob4600.000000>
+Called Profession method 'setProfName' with params: <TestJob>
+Called Profession method 'setBaseRate' with params: <4600.000000>
+Called Human constructor with params: <Worker3, 28>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker3, 28TestJob4600.000000>
+Called Profession method 'setProfName' with params: <TestJob>
+Called Profession method 'setBaseRate' with params: <4600.000000>
+Called Human method 'getInfo'
+Called RecordBook constructor with params: <Math, History>
+Called RecordBook constructor with params: <History:80, Math:100>
+Called RecordBook method 'updateSubject' with params: <Math, 100>
+Called RecordBook method 'getRepr'
+Called Profession constructor with params: <TestJob, 12000.000000>
+Called Profession method 'setProfName' with params: <AnotherJob>
+Called Profession method 'setBaseRate' with params: <6000.000000>
+Called RecordBook constructor with params: <History:80, Math:100>
+Called Human constructor with params: <Student1, 19>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student1, 19>
+Called Human constructor with params: <Student2, 21>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student2, 21TestJob12500.000000>
+Called Profession method 'setProfName' with params: <TestJob1>
+Called Profession method 'setBaseRate' with params: <2500.000000>
+Called Human constructor with params: <Student3, 23>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student3, 23TestJob22400.000000>
+Called Profession method 'setProfName' with params: <TestJob2>
+Called Profession method 'setBaseRate' with params: <2400.000000>
+Called Human constructor with params: <Student4, 20>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student4, 20>
+Called RecordBook method 'updateSubject' with params: <History, 100>
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called RecordBook constructor with params: <History:80, Math:100>
+Called Human constructor with params: <Student1, 20>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student1, 20>
+Called RecordBook method 'updateSubject' with params: <History, 90>
+Called Human constructor with params: <Student2, 22>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student2, 22>
+Called RecordBook method 'updateSubject' with params: <Biology, 50>
+Called Human constructor with params: <Student3, 21>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Student3, 21>
+Called Human constructor with params: <Teacher1, 28>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Teacher1, 28>
+Called Profession constructor with params: <Teacher, 6000.000000>
+Called Human constructor with params: <Teacher2, 36>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Teacher2, 36>
+Called Profession constructor with params: <Teacher, 6000.000000>
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human constructor with params: <Worker 1, 29>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker 1, 29Cleaner3400.000000>
+Called Profession method 'setProfName' with params: <Cleaner>
+Called Profession method 'setBaseRate' with params: <3400.000000>
+Called Human constructor with params: <Worker 2, 30>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker 2, 30Repairman4800.000000>
+Called Profession method 'setProfName' with params: <Repairman>
+Called Profession method 'setBaseRate' with params: <4800.000000>
+Called Human constructor with params: <Worker 3, 46>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Worker 3, 46Watchman4000.000000>
+Called Profession method 'setProfName' with params: <Watchman>
+Called Profession method 'setBaseRate' with params: <4000.000000>
+Called Human constructor with params: <Georgiy Shevchenko, 38>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Georgiy Shevchenko, 38>
+Called Profession constructor with params: <Teacher, 6000.000000>
+Called Human constructor with params: <Anatiliy Petrachuk, 45>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Anatiliy Petrachuk, 45>
+Called Profession constructor with params: <Teacher, 6000.000000>
+Called Human constructor with params: <Stanislav Logvinenko, 24>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Stanislav Logvinenko, 24>
+Called Profession constructor with params: <Teacher, 6000.000000>
+Called RecordBook method 'updateSubject' with params: <Math, 100>
+Called RecordBook method 'updateSubject' with params: <History, 86>
+Called RecordBook method 'updateSubject' with params: <English, 94>
+Called Human constructor with params: <Roman, 19>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Roman, 19Tutor2000.000000>
+Called Profession method 'setProfName' with params: <Tutor>
+Called Profession method 'setBaseRate' with params: <2000.000000>
+Called RecordBook method 'updateSubject' with params: <Math, 98>
+Called RecordBook method 'updateSubject' with params: <History, 90>
+Called RecordBook method 'updateSubject' with params: <English, 100>
+Called Human constructor with params: <Andrew, 20>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Andrew, 20None0.000000>
+Called Profession method 'setProfName' with params: <None>
+Called Profession method 'setBaseRate' with params: <0.000000>
+Called RecordBook method 'updateSubject' with params: <Math, 100>
+Called RecordBook method 'updateSubject' with params: <History, 78>
+Called RecordBook method 'updateSubject' with params: <English, 100>
+Called Human constructor with params: <Kristina, 19>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <Kristina, 19Tutor3500.000000>
+Called Profession method 'setProfName' with params: <Tutor>
+Called Profession method 'setBaseRate' with params: <3500.000000>
+Called RecordBook method 'updateSubject' with params: <Math, 88>
+Called RecordBook method 'updateSubject' with params: <History, 60>
+Called RecordBook method 'updateSubject' with params: <English, 98>
+Called Human constructor with params: <John, 23>
+Called Profession constructor with params: <None, 0.000000>
+Called Worker constructor with params: <John, 23Programmer14000.000000>
+Called Profession method 'setProfName' with params: <Programmer>
+Called Profession method 'setBaseRate' with params: <14000.000000>
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'
+Called Human method 'getInfo'

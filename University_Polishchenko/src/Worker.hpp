@@ -16,6 +16,9 @@
 
 using namespace std;
 
+extern bool LOGGING;
+extern string logs;
+
 class Worker: public Human {
 public:
 //    Worker(string name);
