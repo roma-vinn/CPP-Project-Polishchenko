@@ -1,4 +1,4 @@
-# Project_CPP_Polishchenko
+# CPP Project Polishchenko
 **Виконав**: Поліщенко Роман
 
 **Назва**: University
